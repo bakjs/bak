@@ -1,0 +1,25 @@
+{
+  "name": "bak",
+  "version": "0.0.1",
+  "description": "Helpers for rapid HAPI development",
+  "main": "index.js",
+  "repository": "https://github.com/fandogh/bak",
+  "author": "Pooya Parsa <pooya@pi0.ir>",
+  "dependencies": {
+	"babel-plugin-transform-decorators-legacy": "latest",
+	"babel-polyfill": "latest",
+	"babel-preset-es2015": "latest",
+	"babel-preset-stage-0": "latest",
+	"babel-preset-stage-1": "latest",
+	"babel-register": "latest",
+	"boom": "latest",
+	"config": "latest",
+	"h2o2": "latest",
+	"hapi": "latest",
+	"hapi-decorators": "latest",
+	"hapi-rbac": "latest",
+	"mongoose": "latest",
+	"mongoose-fill": "latest",
+	"nodemon": "latest"
+   }
+}
