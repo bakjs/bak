@@ -1,17 +1,9 @@
-require("babel-register");
-require("babel-polyfill");
 const path = require('path');
-const CLI = require('./modules/cli');
-const Server = require('./modules/server');
-
-delete process.env.NODE_APP_INSTANCE;
-
-function error(err) {
-    console.error(err);
-    process.exit(1);
-}
+require('./helpers/colors');
 
 function init(config) {
+    const CLI = require('./modules/cli');
+    const Server = require('./modules/server');
     let cmd = process.argv[2];
 
     switch (cmd) {
@@ -47,5 +39,9 @@ function init(config) {
             }).catch(error);
     }
 }
-
 module.exports = init;
+
+function error(err) {
+    console.error(err);
+    process.exit(1);
+}

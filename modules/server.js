@@ -1,6 +1,6 @@
 const Hapi = require('hapi');
 
-module.exports = class Kernel {
+class Kernel {
 
     constructor(config) {
         this.config = config;
@@ -32,7 +32,7 @@ module.exports = class Kernel {
         return this;
     }
 
-    async _start() {
+    _start() {
         return new Promise((resolve, reject) => {
             this.server.start((err) => {
                 if (err) return reject(err);
@@ -83,16 +83,25 @@ module.exports = class Kernel {
         return res;
     }
 
-    async route(routes) {
+    route(routes) {
         return new Promise(async(resolve, reject) => {
+
             // Resolve routes
-            routes = this._resolve_routes(routes);
+            try {
+                routes = this._resolve_routes(routes);
+            } catch (e) {
+                this.fatal("Error while resolving route", e, routes);
+            }
 
             // Register
-            this.server.route(routes);
+            try {
+                this.server.route(routes);
+            } catch (e) {
+                this.fatal("Error while registering route", e, routes);
+            }
 
             // Log
-            let colorify = method=> {
+            let colorify = method => {
                 method = method.toUpperCase();
                 switch (method) {
                     case 'GET':
@@ -117,28 +126,29 @@ module.exports = class Kernel {
         });
     }
 
-    async register({plugin, options}) {
-        if (plugin instanceof Function)
-            plugin = plugin(options);
-
+    register(plugin) {
         return new Promise((resolve, reject) => {
-            this.server.register(plugin, (err) => {
-                if (err) return reject(err);
-                if (plugin.next)
-                    plugin.next({resolve, reject, server: this.server, options});
-                else
-                    resolve();
-            });
-        }).catch(err => {
-            console.error(err);
-            console.error('Error register plugin ' + err);
+            try {
+                this.server.register(plugin, (err) => {
+                    if (err) return reject(err);
+                    if (plugin.next)
+                        plugin.next({resolve, reject, server: this.server, options});
+                    else
+                        resolve();
+                });
+            } catch (e) {
+                this.fatal("Error while registering plugin", e, plugin);
+            }
         });
     }
 
-};
+    fatal(msg, error, additional) {
+        console.error(msg);
+        console.error(additional);
+        if (error) console.error(error);
+        process.exit(1);
+    }
 
-// Node String Colors Support. (global version) (https://git.io/colors)
-// Usage console.log(green("Hello world!")
-const _c = require('util').inspect.colors;
-//[ 'bold','italic', 'underline', 'inverse', 'white', 'grey', 'black', 'blue', 'cyan', 'green', 'magenta', 'red', 'yellow' ]
-Object.keys(_c).forEach(c =>global[c] = s =>`\x1b[${_c[c][0]}m${s}\x1b[${_c[c][1]}m`);
+}
+
+module.exports = Kernel;

@@ -16,11 +16,11 @@ class HapiMockServer {
         this.auth = new HapiAuthMock();
     }
 
-    async start(cb) {
+    start(cb) {
         cb();
     }
 
-    async route(routes) {
+    route(routes) {
         // STUB
     }
 
