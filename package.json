@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Helpers for rapid HAPI development",
   "main": "index.js",
   "repository": "https://github.com/fandogh/bak",
