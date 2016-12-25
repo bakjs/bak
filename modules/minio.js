@@ -2,9 +2,17 @@ import Minio from 'minio';
 import Config from 'config';
 
 // Create and export client by default using env config
-const config=Object.assign({},Config.get('minio'));
-config.port=parseInt(config.port);
-config.secure=Boolean(config.secure);
+const default_config = {
+    endPoint: 'localhost',
+    port: 9000,
+    secure: false,
+    accessKey: '',
+    secretKey: ''
+};
+const config = Object.assign({}, default_config, Config.has('minio') ? Config.get('minio') : null);
+config.port = parseInt(config.port);
+config.secure = Boolean(config.secure);
+
 const client = new Minio(config);
 export default client;
 
@@ -19,8 +27,8 @@ const public_url = `${client.protocol}//${client.host}:${client.port}`;
  * @returns {Promise}
  */
 export async function upload(bucket, objName, buff) {
-    return new Promise((resolve, reject)=> {
-        client.putObject(bucket, objName, buff, (err, etag)=> {
+    return new Promise((resolve, reject) => {
+        client.putObject(bucket, objName, buff, (err, etag) => {
             if (err) return reject(err);
             resolve(etag);
         });
