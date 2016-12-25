@@ -17,9 +17,13 @@
     "h2o2": "latest",
     "hapi": "latest",
     "hapi-decorators": "latest",
-    "hapi-rbac": "latest",
+    "hapi-rbac": "latest"
+  },
+  "optionalDependencies": {
     "mongoose": "latest",
     "mongoose-fill": "latest",
-    "nodemon": "latest"
+    "nodemon": "latest",
+    "minio": "latest",
+    "raven-js": "latest"
   }
 }

@@ -1,6 +1,6 @@
 const Hapi = require('hapi');
 
-class Kernel {
+class Server {
 
     constructor(config) {
         this.config = config;
@@ -51,7 +51,7 @@ class Kernel {
 
         let res = [];
 
-        routes.forEach(async(route) => {
+        routes.forEach((route) => {
             // Lazy route
             if (route instanceof Function) route = route(this);
 
@@ -151,4 +151,4 @@ class Kernel {
 
 }
 
-module.exports = Kernel;
+module.exports = Server;
