@@ -1,5 +1,6 @@
 // Based on https://github.com/knownasilya/hapi-decorators (0.4.3)
 
+const Boom = require('boom');
 const extend = require('extend');
 const find = require('lodash.find');
 
@@ -57,22 +58,39 @@ function route(method, path) {
         let targetName = target.constructor.name;
         let routeId = targetName + '.' + key;
 
-        let origFn = descriptor.value;
-        descriptor.value = (function (request, reply) {
+        // Wrap route to general error handler
+        let originalHandler = descriptor.value;
+
+        let handler = function(request, reply) {
+
+            // Error handler
+            let on_err = (err) => {
+                console.error(err);
+                return reply(Boom.internal(err.error));
+            };
+
+            // Execute on target
+            let r;
             try {
-                return origFn(request, reply)
-            } catch (e) {
-                console.error("Unhandled error on route " + routeId, descriptor.value.name + '()', e);
+                r = originalHandler.bind(this)(request, reply);
+            } catch (err) {
+                on_err(err);
             }
-        }).bind(target);
+
+            // Check and handle promises
+            if (r.then) {
+                r.catch(err => {
+                    on_err(err);
+                });
+            }
+
+        };
 
         setRoute(target, key, {
             method: method,
             path: path,
-            config: {
-                id: routeId
-            },
-            handler: descriptor.value,
+            config: {id: routeId},
+            handler: handler,
         });
 
         return descriptor
