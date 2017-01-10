@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Helpers for rapid HAPI development",
   "main": "index.js",
   "repository": "https://github.com/fandogh/bak",
@@ -14,13 +14,13 @@
     "babel-register": "latest",
     "boom": "latest",
     "config": "latest",
-    "h2o2": "latest",
-    "hapi": "latest",
     "debug": "^2.2.0",
     "extend": "^3.0.0",
-    "lodash.find": "^3.2.1",
+    "h2o2": "latest",
+    "hapi": "latest",
     "hapi-rbac": "latest",
-    "js-yaml": "latest"
+    "js-yaml": "latest",
+    "lodash.find": "^3.2.1"
   },
   "optionalDependencies": {
     "minio": "latest",
