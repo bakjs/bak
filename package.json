@@ -16,14 +16,17 @@
     "config": "latest",
     "h2o2": "latest",
     "hapi": "latest",
-    "hapi-decorators": "latest",
-    "hapi-rbac": "latest"
+    "debug": "^2.2.0",
+    "extend": "^3.0.0",
+    "lodash.find": "^3.2.1",
+    "hapi-rbac": "latest",
+    "js-yaml": "latest"
   },
   "optionalDependencies": {
+    "minio": "latest",
     "mongoose": "latest",
     "mongoose-fill": "latest",
     "nodemon": "latest",
-    "minio": "latest",
     "raven-js": "latest"
   }
 }

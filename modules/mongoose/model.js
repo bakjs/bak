@@ -1,16 +1,14 @@
 import Mongoose from './index';
 
-class MongooseModel {
+export default class MongooseModel {
 
-    static get $model() {
-        // Prefer cache
-        if (this.$model_cached) return this.$model_cached;
+    static $make_model(name, collection, connection) {
+        let _collection = collection;
+        let _name = name || this.name;
+        let _connection = connection || global.mongo.connections.default;
 
-        // Get props
         let _schema = this.$schema || {};
-        let _connection = this.$connection || Mongoose;
-        let _name = this.$name || this.name;
-        let _collection = this.$collection;
+
         let _options = Object.assign({}, this.$options, {
             toObject: {
                 virtuals: true,
@@ -35,13 +33,17 @@ class MongooseModel {
         if (this.$wrap_schema) schema = this.$wrap_schema(schema) || schema;
 
         // Add methods from class to schema
-        schema.plugin(MongooseModel.$wrap, this);
+        schema.plugin(wrap, this);
 
         // Create and return a mongoose model using connection
         let model = _connection.model(_name, schema, _collection/*optional*/, false/*skipInit*/);
         model.$schema = schema;
 
-        return this.$model_cached = model;
+        return model;
+    }
+
+    static get $model() {
+        return this.$make_model(this.$name, this.$collection, this.$connection);
     }
 
     static $transform(doc, ret, options) {
@@ -52,68 +54,59 @@ class MongooseModel {
         }
         return ret;
     }
+}
 
-    static $wrap(schema, target, hooks = []) {
-        // Based on https://github.com/aksyonov/mongoose-class-wrapper/blob/master/src/index.js
+function wrap(schema, target, hooks = []) {
+    // Based on https://github.com/aksyonov/mongoose-class-wrapper/blob/master/src/index.js
 
-        let proto = target.prototype;
-        let parent = Object.getPrototypeOf(target);
-        let staticProps = Object.getOwnPropertyNames(target);
-        let prototypeProps = Object.getOwnPropertyNames(proto);
-        let instanceProps = prototypeProps.filter(name => name !== 'constructor');
+    let proto = target.prototype;
+    let parent = Object.getPrototypeOf(target);
+    let staticProps = Object.getOwnPropertyNames(target);
+    let prototypeProps = Object.getOwnPropertyNames(proto);
+    let instanceProps = prototypeProps.filter(name => name !== 'constructor');
 
-        // Wrap parent first
-        if (parent.name) MongooseModel.$wrap(schema, parent, hooks);
+    // Wrap parent first
+    if (parent.name) wrap(schema, parent, hooks);
 
-        // Add model schema
-        // if (target.schema && typeof target.schema == 'object') {
-        //     schema.add(target.schema);
-        // }
-
-        // Add middleware hooks
-        if (target.hooks && typeof target.hooks == 'object') {
-            for (let hookType in target.hooks) {
-                for (let hookAction in target.hooks[hookType]) {
-                    let hook = target.hooks[hookType][hookAction];
-                    let index = hooks.indexOf(hook);
-                    if (index < 0) {
-                        hooks.push(hook);
-                        schema[hookType](hookAction, hook);
-                    }
+    // Add middleware hooks
+    if (target.hooks && typeof target.hooks == 'object') {
+        for (let hookType in target.hooks) {
+            for (let hookAction in target.hooks[hookType]) {
+                let hook = target.hooks[hookType][hookAction];
+                let index = hooks.indexOf(hook);
+                if (index < 0) {
+                    hooks.push(hook);
+                    schema[hookType](hookAction, hook);
                 }
             }
         }
-
-        // Add static methods
-        staticProps.forEach(name => {
-            let method = Object.getOwnPropertyDescriptor(target, name);
-            if (typeof method.value == 'function') schema.static(name, method.value);
-        });
-
-        // Add methods and virtual
-        instanceProps.forEach(name => {
-            let method = Object.getOwnPropertyDescriptor(proto, name);
-            if (typeof method.get == 'function') schema.virtual(name).get(method.get);
-            if (typeof method.set == 'function') schema.virtual(name).set(method.set);
-            if (typeof method.value == 'function') {
-                let x = /^(get|set)_(.+)$/.exec(name);
-                if (x && x[1]) {
-                    switch (x[1]) {
-                        case 'get':
-                            schema.path(x[2]).get(method.value);
-                            break;
-                        case 'set':
-                            schema.path(x[2]).set(method.value);
-                            break;
-                    }
-                } else {
-                    schema.method(name, method.value);
-                }
-            }
-        });
-
     }
+
+    // Add static methods
+    staticProps.forEach(name => {
+        let method = Object.getOwnPropertyDescriptor(target, name);
+        if (typeof method.value == 'function') schema.static(name, method.value);
+    });
+
+    // Add methods and virtual
+    instanceProps.forEach(name => {
+        let method = Object.getOwnPropertyDescriptor(proto, name);
+        if (typeof method.get == 'function') schema.virtual(name).get(method.get);
+        if (typeof method.set == 'function') schema.virtual(name).set(method.set);
+        if (typeof method.value == 'function') {
+            let x = /^(get|set)_(.+)$/.exec(name);
+            if (x && x[1]) {
+                switch (x[1]) {
+                    case 'get':
+                        schema.path(x[2]).get(method.value);
+                        break;
+                    case 'set':
+                        schema.path(x[2]).set(method.value);
+                        break;
+                }
+            } else {
+                schema.method(name, method.value);
+            }
+        }
+    });
 }
-
-module.exports = MongooseModel;
-

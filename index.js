@@ -11,8 +11,8 @@ function init(config) {
         case 'run':
             let cli = new CLI(config);
             global.app = cli;
-            cli.init().then(app => {
-                require(path.resolve(process.cwd(), process.argv[3]));
+            return cli.init().then(app => {
+                require(path.resolve(path.dirname(process.argv[1]), process.argv[3]));
             }).catch(error);
             break;
 
@@ -20,7 +20,7 @@ function init(config) {
         case 'repl':
             let cli2 = new CLI(config);
             global.app = cli2;
-            cli2.init().then(app => {
+            return cli2.init().then(app => {
                 let repl = require("repl");
                 repl.start({
                     prompt: "hapi> ",
@@ -34,7 +34,7 @@ function init(config) {
             // Start Server
             let server = new Server(config);
             global.app = server;
-            server.init().then(app => {
+            return server.init().then(app => {
                 console.log(`Server running at: ${app.server.info.uri}`);
             }).catch(error);
     }

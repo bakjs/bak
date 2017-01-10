@@ -1,4 +1,4 @@
-import decorators from "hapi-decorators";
+import decorators from "./decorators";
 
 class Controller {
 
