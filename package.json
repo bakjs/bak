@@ -14,13 +14,13 @@
     "babel-register": "latest",
     "boom": "latest",
     "config": "latest",
-    "debug": "^2.2.0",
-    "extend": "^3.0.0",
+    "debug": "latest",
+    "extend": "latest",
     "h2o2": "latest",
     "hapi": "latest",
     "hapi-rbac": "latest",
     "js-yaml": "latest",
-    "lodash.find": "^3.2.1"
+    "lodash.find": "latest"
   },
   "optionalDependencies": {
     "minio": "latest",
