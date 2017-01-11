@@ -12,7 +12,7 @@ function init(config) {
             let cli = new CLI(config);
             global.app = cli;
             return cli.init().then(app => {
-                require(path.resolve(path.dirname(process.argv[1]), process.argv[3]));
+                require(process.argv[3]);
             }).catch(error);
             break;
 

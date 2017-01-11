@@ -11,19 +11,21 @@ const HapiMongoosePlugin = {
             }
         }
 
-        let p = Object.keys(config.connections).map(database => new Promise(async(resolve, reject) => {
+        let queue = Object.keys(config.connections).map(database => new Promise((resolve, reject) => {
             let connection_conf = config.connections[database];
-            try {
-                let connection = Mongoose.createConnection(connection_conf.uri);
-                global.mongo.connections[database] = connection;
+            let connection;
 
-                resolve(connection);
-            } catch (e) {
-                reject(`[Mongo] Cannot connect to ${database} : ${e}`);
+            if (database !== 'default') {
+                connection = Mongoose.createConnection(connection_conf.uri);
+            } else {
+                connection = Mongoose.connect(connection_conf.uri);
             }
+
+            global.mongo.connections[database] = connection;
+            resolve();
         }));
 
-        Promise.all(p).then(() => {
+        Promise.all(queue).then(()=>{
             next();
         });
     }

@@ -5,7 +5,7 @@ export default class MongooseModel {
     static $make_model(name, collection, connection) {
         let _collection = collection;
         let _name = name || this.name;
-        let _connection = connection || global.mongo.connections.default;
+        let _connection = connection || Mongoose;
 
         let _schema = this.$schema || {};
 

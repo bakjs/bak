@@ -22,7 +22,7 @@ class Controller {
                 throw new Error('Route path must be set with `@route` or another alias');
             route.path = (this.baseUrl + Controller.trimslash(route.path)) || '/';
             route.config.bind = this;
-            route.config = Object.assign({}, route.config, this.config);
+            route.config = Object.assign({}, this.config, route.config);
             return route;
         });
     }

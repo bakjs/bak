@@ -1,5 +1,5 @@
-import Minio from 'minio';
 import Config from 'config';
+const Minio = require('minio');
 
 // Create and export client by default using env config
 const default_config = {
@@ -13,7 +13,7 @@ const config = Object.assign({}, default_config, Config.has('minio') ? Config.ge
 config.port = parseInt(config.port);
 config.secure = Boolean(config.secure);
 
-const client = new Minio(config);
+const client = new Minio.Client(config);
 export default client;
 
 // Generate public url using client config
