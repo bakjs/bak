@@ -13,7 +13,7 @@ const routeMethods = {
     get: 'get',
     post: 'post',
     put: 'put',
-    delete: 'delete',
+    del: 'delete',
     patch: 'patch',
     all: '*'
 };
