@@ -6,27 +6,22 @@
   "repository": "https://github.com/fandogh/bak",
   "author": "Pooya Parsa <pooya@pi0.ir>",
   "dependencies": {
-    "babel-plugin-transform-decorators-legacy": "latest",
-    "babel-polyfill": "latest",
-    "babel-preset-es2015": "latest",
-    "babel-preset-stage-0": "latest",
-    "babel-preset-stage-1": "latest",
-    "babel-register": "latest",
     "boom": "latest",
     "config": "latest",
-    "debug": "latest",
-    "extend": "latest",
     "h2o2": "latest",
     "hapi": "latest",
-    "hapi-rbac": "latest",
-    "js-yaml": "latest",
-    "lodash.find": "latest"
+    "heok": "latest",
+    "joi": "latest"
   },
   "optionalDependencies": {
     "minio": "latest",
     "mongoose": "latest",
     "mongoose-fill": "latest",
     "nodemon": "latest",
-    "raven-js": "latest"
+    "raven-js": "latest",
+    "js-yaml": "latest",
+    "bcryptjs": "latest",
+    "jsonwebtoken": "latest",
+    "openid-client": "latest"
   }
 }
