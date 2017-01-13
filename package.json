@@ -1,15 +1,12 @@
 {
   "name": "bak",
-  "version": "0.0.7",
-  "description": "Helpers for rapid HAPI development",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Minimalistic & configuration-centric backend framework based on hapi.js",
   "repository": "https://github.com/fandogh/bak",
   "author": "Pooya Parsa <pooya@pi0.ir>",
   "dependencies": {
-    "ascii-table": "latest",
     "boom": "latest",
     "chalk": "latest",
-    "cli-table": "latest",
     "config": "latest",
     "good": "latest",
     "good-console": "latest",

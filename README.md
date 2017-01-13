@@ -1,2 +1,2 @@
 # BAK Framework
-BAK is a set of helpers for rapid HAPI development.
+BAK is a minimalistic and configuration-centric backend framework based on hapi.js
