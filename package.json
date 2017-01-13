@@ -16,9 +16,7 @@
     "hoek": "latest",
     "joi": "latest",
     "lodash": "latest",
-    "table-master": "latest",
-    "underscore": "latest",
-    "q": "latest"
+    "table-master": "latest"
   },
   "optionalDependencies": {
     "bcryptjs": "latest",
