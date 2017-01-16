@@ -16,8 +16,8 @@ config.secure = Boolean(config.secure);
 const client = new Minio.Client(config);
 module.exports = client;
 
-// Generate public url using client config
-const public_url = `${client.protocol}//${client.host}:${client.port}`;
+// Generate public url using client config if not provided
+const public_url = config.public_url || `${client.protocol}//${client.host}:${client.port}`;
 
 /**
  * Upload buffer to client

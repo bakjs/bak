@@ -1,6 +1,5 @@
 {
   "name": "bak",
-  "version": "0.1.0",
   "description": "Minimalistic & configuration-centric backend framework based on hapi.js",
   "repository": "https://github.com/fandogh/bak",
   "author": "Pooya Parsa <pooya@pi0.ir>",
