@@ -1,8 +1,9 @@
 {
   "name": "bak",
-  "description": "Minimalistic & configuration-centric backend framework based on hapi.js",
+  "description": "Minimalistic full-stack framework based on hapi.js & nuxt",
   "repository": "https://github.com/fandogh/bak",
   "author": "Pooya Parsa <pooya@pi0.ir>",
+  "version": "0.1.0",
   "dependencies": {
     "boom": "latest",
     "chalk": "latest",
@@ -13,6 +14,7 @@
     "h2o2": "latest",
     "hapi": "latest",
     "hoek": "latest",
+    "inert": "latest",
     "joi": "latest",
     "lodash": "latest",
     "table-master": "latest"
@@ -26,6 +28,7 @@
     "mongoose-fill": "latest",
     "nodemon": "latest",
     "openid-client": "latest",
-    "raven-js": "latest"
+    "raven-js": "latest",
+    "sharp": "pi0/sharp#5925dc8"
   }
 }
