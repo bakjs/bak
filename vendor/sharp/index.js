@@ -5,7 +5,9 @@ let sharp = {};
 try {
     sharp = require('sharp');
 } catch (e) {
-
+    sharp = () => {
+        console.error("Sharp is not installed!");
+    }
 }
 
 // Setup security policy rules for ImageMagick
