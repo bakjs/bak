@@ -3,7 +3,7 @@
   "description": "Minimalistic full-stack framework based on hapi.js & nuxt",
   "repository": "https://github.com/fandogh/bak",
   "author": "Pooya Parsa <pooya@pi0.ir>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "boom": "latest",
     "chalk": "latest",
