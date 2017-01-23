@@ -27,9 +27,9 @@
     "mongoose": "latest",
     "mongoose-fill": "latest",
     "nodemon": "latest",
+    "nuxt": "latest",
     "openid-client": "latest",
     "raven-js": "latest",
-    "nuxt": "latest",
     "sharp": "latest"
   }
 }
