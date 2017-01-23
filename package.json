@@ -30,6 +30,6 @@
     "openid-client": "latest",
     "raven-js": "latest",
     "nuxt": "latest",
-    "sharp": "pi0/sharp#5925dc8"
+    "sharp": "latest"
   }
 }
