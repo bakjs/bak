@@ -26,9 +26,9 @@ const public_url = config.public_url || `${client.protocol}//${client.host}:${cl
  * @param buff
  * @returns {Promise.<String>}
  */
-module.exports.upload = function upload(bucket, objName, buff) {
+module.exports.upload = function upload(bucket, objName, buff, contentType = 'application/octet-stream') {
     return new Promise((resolve, reject) => {
-        client.putObject(bucket, objName, buff, (err, etag) => {
+        client.putObject(bucket, objName, buff, contentType, (err, etag) => {
             if (err) return reject(err);
             resolve(etag);
         });
