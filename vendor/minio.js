@@ -46,7 +46,7 @@ module.exports.upload = function upload(bucket, objName, buff, contentType = 'ap
 module.exports.url = function url(bucket, objName, etag, content_type) {
     let suffix = (etag || content_type) ? '?' : '';
     if (etag)
-        suffix += `etag=${etag}`;
+        suffix += `${etag.substr(0, 7)}`;
     if (content_type)
         suffix += `&response-content-type=${content_type}`;
 
