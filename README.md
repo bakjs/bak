@@ -1,10 +1,12 @@
-# BAK Framework
-BAK is a minimalistic and configuration-centric backend framework based on hapi.js
+# BAK
+[![dependencies Status](https://david-dm.org/fandogh/bak/status.svg)](https://david-dm.org/fandogh/bak)
+
+Configuration-centric web framework powered by hapi.js.
 
 # License
 The MIT License (MIT)
 
-Copyright (c) 2016 Pooya Parsa
+Copyright (c) 2016 Fandogh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
