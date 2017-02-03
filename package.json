@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "0.2.0-alpha",
+  "version": "0.2.1",
   "description": "Configuration-centric web framework powered by hapi.js",
   "repository": "https://github.com/fandogh/bak",
   "contributors": [
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "bcryptjs": "^2.4.0",
-    "boom": "^2.10.1",
+    "boom": "^4.2.0",
     "chalk": "^1.1.3",
     "config": "^1.2.5",
     "git-rev": "^0.2.1",
@@ -17,7 +17,7 @@
     "good-squeeze": "^5.0.1",
     "h2o2": "^5.4.0",
     "hapi": "^16.1.0",
-    "hoek": "^2.16.3",
+    "hoek": "^4.1.0",
     "inert": "^4.1.0",
     "joi": "^10.2.0",
     "js-yaml": "^3.7.0",
