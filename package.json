@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Configuration-centric web framework powered by hapi.js",
   "repository": "https://github.com/fandogh/bak",
   "contributors": [
@@ -29,10 +29,6 @@
     "nodemon": "^1.11.0",
     "openid-client": "^1.5.2",
     "raven": "^1.1.1",
-    "raven-js": "^3.10.0",
     "table-master": "^1.0.3"
-  },
-  "devDependencies": {
-    "jest": "^18.1.0"
   }
 }
