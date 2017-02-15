@@ -1,12 +1,13 @@
 {
   "name": "bak",
-  "version": "0.4.0",
+  "version": "0.5.0-alpha",
   "description": "Configuration-centric web framework powered by hapi.js",
   "repository": "https://github.com/fandogh/bak",
   "contributors": [
     "Pooya Parsa <pooya@pi0.ir>"
   ],
   "dependencies": {
+    "axios": "^0.15.3",
     "bcryptjs": "^2.4.3",
     "boom": "^4.2.0",
     "chalk": "^1.1.3",
