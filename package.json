@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Configuration-centric web framework powered by hapi.js",
   "repository": "https://github.com/fandogh/bak",
   "contributors": [
