@@ -1,7 +1,7 @@
 {
   "name": "bak",
   "version": "1.0.0",
-  "description": "BAK Framework",
+  "description": "Delightful and modern web applications framework based on Hapi.js",
   "repository": "https://github.com/bakjs/bak",
   "main": "lib/index.js",
   "bin": "bin/bak",

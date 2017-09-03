@@ -4,7 +4,7 @@
 </a>
 </p>
 
-<br> <p align="center">Modern and delightful web application framework based on hapi.js</p> <br>
+<br> <p align="center">Delightful and modern web applications framework based on Hapi.js</p> <br>
 
 <p align="center">
 <a href="https://github.com/bakjs/bak">
@@ -73,9 +73,9 @@ Start server
 >_ yarn bak start
 ```
 
-![image](https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png)
+Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results.
 
-Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results!
+![image](https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png)
 
 
 <h1 align="center">Packages</h1>
