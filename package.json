@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "Delightful and modern web applications framework based on Hapi.js",
   "repository": "https://github.com/bakjs/bak",
   "main": "lib/index.js",
@@ -12,8 +12,8 @@
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --ext .js .",
-    "release:packages": "lerna publish --conventional-commits",
-    "release": "npm run lerna:release && standard-version"
+    "publish:packages": "lerna publish --conventional-commits",
+    "publish:core": "standard-version -p"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
