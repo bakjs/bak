@@ -20,7 +20,6 @@
     "boom": "^5.2.0",
     "chalk": "^2.1.0",
     "config": "^1.26.2",
-    "crypto": "^1.0.1",
     "hapi": "^16.5.2",
     "items-promise": "^1.0.0",
     "jsonwebtoken": "^7.4.3",
