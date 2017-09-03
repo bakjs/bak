@@ -38,7 +38,7 @@
 Install `bak` dependency
 
 ```bash
->_ yarn add bak
+>_ yarn add bak@next
 ```
 
 Create `bak.config.js`
