@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://bak.js.org">
-    <img src="https://github.com/bakjs/bak/raw/master/artwork/logo.webp" width="300px">
+    <img src="https://github.com/bakjs/bak/raw/dev/artwork/logo.webp" width="300px">
 </a>
 
 <br>
@@ -21,6 +21,7 @@
 </a>
 
 </p>
+
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
 
 **Documentation is coming soon**
