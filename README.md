@@ -24,15 +24,61 @@
 </a>
 </p>
 
-## Features
+<h1 align="center">Features</h1>
+
 - Built on top of [hapi.js](https://hapijs.com), A rich framework for building applications and services
 - Designed for modern Node.js APIs. Supporting native async/await and promises
 - Controller support for routing
 - Single file configuration without need to extra boilerplate
-- Many ready to use and updated plugins and packages
+- Lots of ready to use and stable plugins
 - CLI & Dev friendly tools
 
-## Packages
+<h1 align="center">Getting started</h1>
+
+Install `bak` dependency
+
+```bash
+>_ yarn add bak
+```
+
+Create `bak.config.js`
+
+```js
+module.exports = {
+  prefix: '/api',
+  routes: [
+    './controllers/api'
+  ]
+}
+```
+
+Create `controllers/api.js`
+
+```js
+const { Controller } = require('bak')
+
+module.exports class APIController extends Controller {
+
+  // Auto magically creates /api/hello/{name} route
+  hello_$$name (request, reply) {
+    reply('Hello ' + request.params.name)
+  }
+
+}
+```
+
+Start server
+
+```bash
+>_ yarn bak start
+```
+
+![image](https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png)
+
+Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results!
+
+
+<h1 align="center">Packages</h1>
 
 ### auth
 - [Source](./packages/auth)
