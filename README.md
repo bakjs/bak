@@ -1,12 +1,14 @@
 <p align="center">
 <a href="https://bak.js.org">
-    <img src="https://github.com/bakjs/bak/raw/dev/artwork/logo.webp" width="500px">
+    <img src="https://github.com/bakjs/bak/raw/dev/artwork/logo.webp" width="400px">
 </a>
+</p>
 
 <br><br>
-Modern and delightful web application framework based on hapi.js
+<p align="center">Modern and delightful web application framework based on hapi.js</p>
 <br><br>
 
+<p align="center">
 <a href="https://github.com/bakjs/bak">
     <img alt="" src="https://david-dm.org/bakjs/bak.svg?style=flat-square">
 </a>
@@ -24,15 +26,38 @@ Modern and delightful web application framework based on hapi.js
 </a>
 </p>
 
-[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
-
 ## Features
-- Built on top of [Hapi.js](https://hapijs.com), A rich framework for building applications and services
+- Built on top of [hapi.js](https://hapijs.com), A rich framework for building applications and services
 - Designed for modern Node.js APIs. Supporting native async/await and promises
 - Controller support for routing
 - Single file configuration without need to extra boilerplate
-- Dozens of plugins and packages
+- Many ready to use and updated plugins and packages
 - CLI & Dev friendly
+
+## Packages
+
+### `@bakjs/auth`
+- [Source]((./packages/auth))
+
+### `@bakjs/logging`
+- [Source]((./packages/logging))
+
+### `@bakjs/minio`
+- [Source]((./packages/minio))
+
+### `@bakjs/mongo`
+- [Source]((./packages/mongo))
+
+
+### `@bakjs/nunjucks`
+- [Source]((./packages/nunjucks))
+
+
+### `@bakjs/policy`
+- [Source]((./packages/policy))
+
+### `@bakjs/ratelimit`
+- [Source]((./packages/ratelimit))
 
 # License
 Released under The MIT [LICENSE](./LICENSE).       
