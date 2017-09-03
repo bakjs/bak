@@ -1,11 +1,11 @@
 <p align="center">
 <a href="https://bak.js.org">
-    <img src="https://github.com/bakjs/bak/raw/dev/artwork/logo.webp" width="300px">
+    <img src="https://github.com/bakjs/bak/raw/dev/artwork/logo.webp" width="500px">
 </a>
 
-<br>
+<br><br>
 Modern and delightful web application framework based on hapi.js
-<br>
+<br><br>
 
 <a href="https://github.com/bakjs/bak">
     <img alt="" src="https://david-dm.org/bakjs/bak.svg?style=flat-square">
@@ -19,20 +19,20 @@ Modern and delightful web application framework based on hapi.js
 <a href="https://www.npmjs.com/package/bak">
     <img alt="" src="https://img.shields.io/npm/v/bak.svg?style=flat-square">
 </a>
-
+<a href="https://github.com/bakjs/bak">
+    <img alt="" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square">
+</a>
 </p>
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
 
-**Documentation is coming soon**
-
 ## Features
-- Built on [Hapi.js](https://hapijs.com), A rich framework for building applications and services
-- Fully ES6 support
+- Built on top of [Hapi.js](https://hapijs.com), A rich framework for building applications and services
+- Designed for modern Node.js APIs. Supporting native async/await and promises
 - Controller support for routing
 - Single file configuration without need to extra boilerplate
-- Many plugins ready to use
-- CLI & Dev friendly tools
+- Dozens of plugins and packages
+- CLI & Dev friendly
 
 # License
 Released under The MIT [LICENSE](./LICENSE).       
