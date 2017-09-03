@@ -30,31 +30,31 @@
 - Controller support for routing
 - Single file configuration without need to extra boilerplate
 - Many ready to use and updated plugins and packages
-- CLI & Dev friendly
+- CLI & Dev friendly tools
 
 ## Packages
 
 ### auth
-- [Source]((./packages/auth))
+- [Source](./packages/auth)
 
 ### logging
-- [Source]((./packages/logging))
+- [Source](./packages/logging)
 
 ### minio
-- [Source]((./packages/minio))
+- [Source](./packages/minio)
 
 ### mongo
-- [Source]((./packages/mongo))
+- [Source](./packages/mongo)
 
 ### nunjucks
-- [Source]((./packages/nunjucks))
+- [Source](./packages/nunjucks)
 
 
 ### policy
-- [Source]((./packages/policy))
+- [Source](./packages/policy)
 
 ### ratelimit
-- [Source]((./packages/ratelimit))
+- [Source](./packages/ratelimit)
 
 # License
 Released under The MIT [LICENSE](./LICENSE).       
