@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/nunjucks",
-  "version": "0.1.0-alpha.a820d452",
+  "version": "0.1.0",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
