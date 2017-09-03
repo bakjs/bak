@@ -4,9 +4,7 @@
 </a>
 </p>
 
-<br><br>
-<p align="center">Modern and delightful web application framework based on hapi.js</p>
-<br><br>
+<br> <p align="center">Modern and delightful web application framework based on hapi.js</p> <br>
 
 <p align="center">
 <a href="https://github.com/bakjs/bak">
@@ -36,27 +34,26 @@
 
 ## Packages
 
-### `@bakjs/auth`
+### auth
 - [Source]((./packages/auth))
 
-### `@bakjs/logging`
+### logging
 - [Source]((./packages/logging))
 
-### `@bakjs/minio`
+### minio
 - [Source]((./packages/minio))
 
-### `@bakjs/mongo`
+### mongo
 - [Source]((./packages/mongo))
 
-
-### `@bakjs/nunjucks`
+### nunjucks
 - [Source]((./packages/nunjucks))
 
 
-### `@bakjs/policy`
+### policy
 - [Source]((./packages/policy))
 
-### `@bakjs/ratelimit`
+### ratelimit
 - [Source]((./packages/ratelimit))
 
 # License
