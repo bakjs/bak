@@ -247,7 +247,7 @@ class AuthDefaultProvider extends AuthBaseProvider {
     delete user._id
 
     // Find or update local user record
-    let local_user = await this.options.user_model.findOne({ id: user.id })
+    let local_user = await this.options.user_model.findOne({ id: user.id }) /* eslont-disable-line new-cap */
 
     if (!local_user) {
       // Create local user if not found
