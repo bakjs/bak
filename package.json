@@ -13,7 +13,7 @@
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --ext .js .",
     "publish:packages": "lerna publish --conventional-commits",
-    "publish:core": "standard-version -p"
+    "publish:core": "standard-version -p && git push --follow-tags && npm publish --tag next"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
