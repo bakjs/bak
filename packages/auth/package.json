@@ -1,0 +1,29 @@
+{
+  "name": "@bakjs/auth",
+  "version": "0.1.0-alpha.a820d452",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    {
+      "name": "Pooya Parsa",
+      "email": "pooya@pi0.ir"
+    }
+  ],
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "dependencies": {
+    "@bakjs/mongo": "*",
+    "bak": "*",
+    "axios": "^0.16.2",
+    "boom": "^5.2.0",
+    "hoek": "^4.2.0",
+    "joi": "^10.6.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.9"
+  }
+}

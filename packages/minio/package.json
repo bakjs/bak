@@ -1,0 +1,23 @@
+{
+  "name": "@bakjs/minio",
+  "version": "0.1.0-alpha.a820d452",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    {
+      "name": "Pooya Parsa",
+      "email": "pooya@pi0.ir"
+    }
+  ],
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "dependencies": {
+    "config": "^1.26.2",
+    "minio": "^3.2.0"
+  }
+}
