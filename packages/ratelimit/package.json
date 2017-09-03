@@ -16,7 +16,7 @@
     "lib",
     "index.js"
   ],
-  "peerDependencies": {
-    "bak": "*"
+  "dependencies": {
+    "bak": "next"
   }
 }

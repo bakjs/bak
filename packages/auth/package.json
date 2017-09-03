@@ -16,16 +16,14 @@
     "lib",
     "index.js"
   ],
-  "peerDependencies": {
-    "@bakjs/mongo": "*",
-    "bak": "*"
-  },
   "dependencies": {
     "axios": "^0.16.2",
     "boom": "^5.2.0",
     "hoek": "^4.2.0",
     "joi": "^10.6.0",
     "lodash": "^4.17.4",
-    "mongoose": "^4.11.9"
+    "mongoose": "^4.11.9",
+    "@bakjs/mongo": "latest",
+    "bak": "next"
   }
 }

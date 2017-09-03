@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "lerna": "lerna",
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap && lerna exec yarn link bak",
     "lint": "eslint --ext .js .",
     "publish:packages": "lerna publish --conventional-commits",
     "publish:core": "standard-version -p && git push --follow-tags && npm publish --tag next"
