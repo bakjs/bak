@@ -22,6 +22,7 @@
     "config": "^1.26.2",
     "crypto": "^1.0.1",
     "hapi": "^16.5.2",
+    "items-promise": "^1.0.0",
     "jsonwebtoken": "^7.4.3",
     "lodash": "^4.17.4",
     "mongoose": "^4.11.9",
