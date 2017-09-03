@@ -4,7 +4,7 @@
 </a>
 
 <br>
-<p>Modern and delightful web application framework based on hapi.js<br>
+Modern and delightful web application framework based on hapi.js
 <br>
 
 <a href="https://github.com/bakjs/bak">
