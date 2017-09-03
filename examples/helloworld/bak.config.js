@@ -1,6 +1,6 @@
 module.exports = {
-    prefix: '/api',
-    routes: [
-        './controllers/api'
-    ]
+  prefix: '/api',
+  routes: [
+    './controllers/api'
+  ]
 }

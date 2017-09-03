@@ -11,7 +11,7 @@
   "scripts": {
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
-    "lint": "eslint --ext .js modules",
+    "lint": "eslint --ext .js .",
     "release:packages": "lerna publish --conventional-commits",
     "release": "npm run lerna:release && standard-version"
   },

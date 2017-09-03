@@ -2,15 +2,15 @@ const GuardPlugin = require('./guard')
 const AuthorizePlugin = require('./authorize')
 
 exports.register = function (server, options, next) {
-    if (!options) options = {}
+  if (!options) options = {}
 
-    server.register({ register: GuardPlugin, options })
+  server.register({ register: GuardPlugin, options })
 
-    server.register({ register: AuthorizePlugin, options })
+  server.register({ register: AuthorizePlugin, options })
 
-    next()
+  next()
 }
 
 exports.register.attributes = {
-    name: 'bak-policy'
+  name: 'bak-policy'
 }

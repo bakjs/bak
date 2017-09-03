@@ -1,33 +1,30 @@
-const Stream = require('stream');
-const hoek = require('hoek');
-const _ = require('lodash');
-const Audit = require('./model');
+const Stream = require('stream')
+const Audit = require('./model')
 
 class GoodAudit extends Stream.Writable {
+  constructor (options) {
+    super({objectMode: true, decodeStrings: false})
+    this.options = options || {}
+  }
 
-    constructor(options) {
-        super({objectMode: true, decodeStrings: false});
-        this.options = options || {};
+  _write (_data, encoding, cb) {
+    // https://github.com/hapijs/good/blob/master/API.md#requestlog
+    let {tags = [], data = {}} = _data
+
+    // Only accept audit logs
+    if (tags !== 'audit' && tags.indexOf('audit') === -1) {
+      return cb()
     }
 
-    _write(_data, encoding, cb) {
-        // https://github.com/hapijs/good/blob/master/API.md#requestlog
-        let {tags = [], data = {}} = _data;
+    // New audit entry
+    const audit = new Audit(data)
 
-        // Only accept audit logs
-        if (tags !== 'audit' && tags.indexOf('audit') === -1) {
-            return cb();
-        }
+    // Save async
+    audit.save()
 
-        // New audit entry
-        const audit = new Audit(data);
-
-        // Save async
-        audit.save();
-
-        // Stream callback
-        cb();
-    }
+    // Stream callback
+    cb()
+  }
 }
 
-module.exports = GoodAudit;
+module.exports = GoodAudit
