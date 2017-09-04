@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@bakjs/mongo@next":
-  version "0.1.1-0"
-  resolved "https://registry.yarnpkg.com/@bakjs/mongo/-/mongo-0.1.1-0.tgz#7bfd1a82f3e14af3a9603c4502d99794a22d5171"
+"@bakjs/mongo@latest":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@bakjs/mongo/-/mongo-0.1.1.tgz#2850b9eaab35856ad8bd2b9f86a0a27c3716d6ef"
   dependencies:
     cachegoose "^3.0.2"
     lodash "^4.17.4"
@@ -233,10 +233,11 @@ babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-bak@next:
-  version "1.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/bak/-/bak-1.0.0-alpha.2.tgz#5538e6537d8c83a63dfbccd0b865adb55827a730"
+bak@latest:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/bak/-/bak-1.0.0.tgz#bc879919689810d8af0a6f728d2654582dcb5d21"
   dependencies:
+    "@bakjs/mongo" latest
     bcryptjs "^2.4.3"
     boom "^5.2.0"
     chalk "^2.1.0"
