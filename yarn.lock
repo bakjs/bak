@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@bakjs/mongo@latest":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@bakjs/mongo/-/mongo-0.1.0.tgz#e4bf344f735e7142dd758d2067675c6a3af25a7a"
+"@bakjs/mongo@next":
+  version "0.1.1-0"
+  resolved "https://registry.yarnpkg.com/@bakjs/mongo/-/mongo-0.1.1-0.tgz#7bfd1a82f3e14af3a9603c4502d99794a22d5171"
   dependencies:
     cachegoose "^3.0.2"
     lodash "^4.17.4"
