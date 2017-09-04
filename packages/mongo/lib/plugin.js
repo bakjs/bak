@@ -1,10 +1,10 @@
 const Mongoose = require('mongoose')
 
-const MongoosePlugin = {
-  register: function (server, config = {}, next) {
-    // Use native promises
-    Mongoose.Promise = global.Promise
+// Use native promises
+Mongoose.Promise = global.Promise
 
+const MongoosePlugin = {
+  register (server, config = {}, next) {
     // Register mongoose-fill
     // @see https://github.com/whitecolor/mongoose-fill
     if (config.fill !== false) {
@@ -27,7 +27,8 @@ const MongoosePlugin = {
       const connection = config.connections[connection_name]
 
       const clientOptions = {
-        useMongoClient: true
+        useMongoClient: true,
+        promiseLibrary: global.Promise
       }
 
       if (connection_name === 'default') {
