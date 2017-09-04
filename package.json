@@ -13,6 +13,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
