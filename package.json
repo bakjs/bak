@@ -8,7 +8,8 @@
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --ext .js packages",
-    "release": "lerna publish -p --conventional-commits -- --access=public"
+    "release": "lerna publish -p --conventional-commits && npm run force-release",
+    "force-release": "for p in packages/*; do cd $p ; npm publish ; cd ../.. ; done"
   },
   "workspaces": [
     "packages/*"
