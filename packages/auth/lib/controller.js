@@ -9,13 +9,13 @@ class $AuthController extends Controller {
       },
       routes: {
         auth_user: {
-          auth: {mode: 'required'}
+          auth: { mode: 'required' }
         },
         auth_login_post: {
           enabled: authProvider.loginSupported
         },
         auth_logout: {
-          auth: {mode: 'required'},
+          auth: { mode: 'required' },
           enabled: authProvider.loginSupported
         },
         oauth_$clientID_login: {
@@ -31,29 +31,29 @@ class $AuthController extends Controller {
   }
 
   async auth_login_post (request, reply) {
-    let {username, password} = request.payload
-    let {token} = await this.authProvider.login({username, password, request})
-    reply({token})
+    let { username, password } = request.payload || {}
+    let { token } = await this.authProvider.login({ username, password, request })
+    reply({ token })
   }
 
   async auth_logout (request, reply) {
-    let {session, user} = request
-    await this.authProvider.logout({user, session})
+    let { session, user } = request
+    await this.authProvider.logout({ user, session })
     reply('LOGGED_OUT')
   }
 
   auth_user (request, reply) {
-    reply({user: request.user})
+    reply({ user: request.user })
   }
 
-  async oauth_$clientID_login_any (request, reply, {clientID}) {
+  async oauth_$clientID_login_any (request, reply, { clientID }) {
     let redirect_uri = await this.authProvider.oauthLogin(clientID)
-    reply({redirect_uri})
+    reply({ redirect_uri })
   }
 
-  async oauth_$clientID_authorize_any (request, reply, {clientID}) {
-    let {token, user} = await this.authProvider.oauthAuthorize(clientID, request)
-    reply({token, user})
+  async oauth_$clientID_authorize_any (request, reply, { clientID }) {
+    let { token, user } = await this.authProvider.oauthAuthorize(clientID, request)
+    reply({ token, user })
   }
 }
 
