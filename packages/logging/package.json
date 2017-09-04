@@ -17,7 +17,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@bakjs/mongo": "next",
+    "@bakjs/mongo": "latest",
     "chalk": "^2.1.0",
     "git-rev": "^0.2.1",
     "good": "^7.3.0",

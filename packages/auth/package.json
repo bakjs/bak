@@ -17,9 +17,9 @@
     "index.js"
   ],
   "dependencies": {
-    "@bakjs/mongo": "next",
+    "@bakjs/mongo": "latest",
     "axios": "^0.16.2",
-    "bak": "next",
+    "bak": "latest",
     "boom": "^5.2.0",
     "hoek": "^4.2.0",
     "joi": "^10.6.0",

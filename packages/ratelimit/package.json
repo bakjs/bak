@@ -17,6 +17,6 @@
     "index.js"
   ],
   "dependencies": {
-    "bak": "next"
+    "bak": "latest"
   }
 }
