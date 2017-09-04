@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/auth",
-  "version": "0.1.1",
+  "version": "0.1.2-0",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -17,13 +17,13 @@
     "index.js"
   ],
   "dependencies": {
+    "@bakjs/mongo": "next",
     "axios": "^0.16.2",
+    "bak": "next",
     "boom": "^5.2.0",
     "hoek": "^4.2.0",
     "joi": "^10.6.0",
     "lodash": "^4.17.4",
-    "mongoose": "^4.11.9",
-    "@bakjs/mongo": "next",
-    "bak": "next"
+    "mongoose": "^4.11.9"
   }
 }
