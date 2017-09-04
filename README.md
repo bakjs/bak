@@ -80,6 +80,11 @@ Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http:/
 
 <h1 align="center">Packages</h1>
 
+### bak
+- [Source](./packages/bak)
+
+This is the core package, containing CLI binaries, Controller, Utils and more. 
+
 ### auth
 - [Source](./packages/auth)
 
