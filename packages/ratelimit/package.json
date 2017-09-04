@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/ratelimit",
-  "version": "0.1.2-0",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
