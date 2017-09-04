@@ -1,11 +1,6 @@
 {
   "lerna": "2.1.2",
-  "packages": [
-    "packages/**"
-  ],
-  "bootstrap": {
-    "hoist": true
-  },
+  "useWorkspaces": true,
   "version": "independent",
   "npmClient": "yarn"
 }

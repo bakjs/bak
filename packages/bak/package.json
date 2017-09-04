@@ -1,0 +1,26 @@
+{
+  "name": "bak",
+  "version": "1.0.0-alpha.2",
+  "description": "Delightful and modern web applications framework based on Hapi.js",
+  "repository": "https://github.com/bakjs/bak",
+  "main": "lib/index.js",
+  "bin": "bin/bak",
+  "contributors": [
+    "Pooya Parsa <pooya@fandogh.org>"
+  ],
+  "dependencies": {
+    "@bakjs/mongo": "latest",
+    "bcryptjs": "^2.4.3",
+    "boom": "^5.2.0",
+    "chalk": "^2.1.0",
+    "config": "^1.26.2",
+    "hapi": "^16.5.2",
+    "items-promise": "^1.0.0",
+    "jsonwebtoken": "^7.4.3",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.9",
+    "pretty-error": "^2.1.1",
+    "strip-ansi": "^4.0.0",
+    "sywac": "^1.1.0"
+  }
+}

@@ -1,34 +1,18 @@
 {
-  "name": "bak",
-  "version": "1.0.0-alpha.2",
-  "description": "Delightful and modern web applications framework based on Hapi.js",
-  "repository": "https://github.com/bakjs/bak",
-  "main": "lib/index.js",
-  "bin": "bin/bak",
+  "private": true,
+  "bin": "packages/bak/bin/bak",
   "contributors": [
     "Pooya Parsa <pooya@fandogh.org>"
   ],
   "scripts": {
     "lerna": "lerna",
-    "bootstrap": "lerna bootstrap && lerna exec yarn link bak",
-    "lint": "eslint --ext .js .",
-    "publish:packages": "lerna publish --conventional-commits",
-    "publish:core": "standard-version -p && git push --follow-tags && npm publish --tag next"
+    "bootstrap": "lerna bootstrap",
+    "lint": "eslint --ext .js packages",
+    "publish:packages": "lerna publish --conventional-commits --npm-tag next"
   },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "boom": "^5.2.0",
-    "chalk": "^2.1.0",
-    "config": "^1.26.2",
-    "hapi": "^16.5.2",
-    "items-promise": "^1.0.0",
-    "jsonwebtoken": "^7.4.3",
-    "lodash": "^4.17.4",
-    "mongoose": "^4.11.9",
-    "pretty-error": "^2.1.1",
-    "strip-ansi": "^4.0.0",
-    "sywac": "^1.1.0"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
