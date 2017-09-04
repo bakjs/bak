@@ -8,7 +8,7 @@
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --ext .js packages",
-    "publish:packages": "lerna publish --conventional-commits --npm-tag next"
+    "next": "lerna publish -p --npm-tag next --cd-version prerelease"
   },
   "workspaces": [
     "packages/*"
