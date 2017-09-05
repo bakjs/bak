@@ -1,15 +1,15 @@
 const Stream = require('stream')
-const Audit = require('./model')
+const { Audit } = require('..')
 
 class GoodAudit extends Stream.Writable {
   constructor (options) {
-    super({objectMode: true, decodeStrings: false})
+    super({ objectMode: true, decodeStrings: false })
     this.options = options || {}
   }
 
   _write (_data, encoding, cb) {
     // https://github.com/hapijs/good/blob/master/API.md#requestlog
-    let {tags = [], data = {}} = _data
+    let { tags = [], data = {} } = _data
 
     // Only accept audit logs
     if (tags !== 'audit' && tags.indexOf('audit') === -1) {
