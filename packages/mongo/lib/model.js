@@ -42,7 +42,8 @@ module.exports = class MongooseModel {
   }
 
   static get $model () {
-    return this.$make_model(this.$name, this.$collection, this.$connection)
+    this.__model = this.__model || this.$make_model(this.$name, this.$collection, this.$connection)
+    return this.__model
   }
 
   static $transform () {
