@@ -36,9 +36,7 @@ const LoggingPlugin = {
 }
 
 LoggingPlugin.register.attributes = {
-  pkg: {
-    name: 'bak-logging'
-  }
+  name: 'bak-logging'
 }
 
 module.exports = LoggingPlugin
