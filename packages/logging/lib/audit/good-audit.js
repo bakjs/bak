@@ -1,5 +1,5 @@
 const Stream = require('stream')
-const { Audit } = require('..')
+const Audit = require('./model')
 
 class GoodAudit extends Stream.Writable {
   constructor (options) {
