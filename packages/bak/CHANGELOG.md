@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/bakjs/bak/compare/bak@1.1.2...bak@1.1.3) (2017-09-06)
+
+
+### Bug Fixes
+
+* install mongo by default for core ([b82810c](https://github.com/bakjs/bak/commit/b82810c))
+
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/bakjs/bak/compare/bak@1.1.1...bak@1.1.2) (2017-09-06)
 
