@@ -60,16 +60,11 @@ module.exports = class Server {
       routes = require(resolve(this.options.relativeTo, routes))
     }
 
-    if (routes.prototype instanceof Controller) {
+    if (routes instanceof Function) {
       dirty = true
       routes = new routes() // eslint-disable-line new-cap
       routes.server = this
       routes.hapi = this.hapi
-    }
-
-    if (routes instanceof Function) {
-      dirty = true
-      routes = await routes(this.bak)
     }
 
     if (routes.routes instanceof Function) {
