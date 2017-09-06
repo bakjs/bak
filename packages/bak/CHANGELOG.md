@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/bakjs/bak/compare/bak@1.1.0...bak@1.1.1) (2017-09-06)
+
+
+### Bug Fixes
+
+* routes constructor ([a92a626](https://github.com/bakjs/bak/commit/a92a626))
+
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/bakjs/bak/compare/bak@1.0.1...bak@1.1.0) (2017-09-06)
 
