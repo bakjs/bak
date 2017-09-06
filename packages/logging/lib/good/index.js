@@ -12,7 +12,7 @@ const GoodPlugin = {
     const squeeze = {
       module: 'good-squeeze',
       name: 'Squeeze',
-      args: [{log: '*', request: '*'}]
+      args: [{ log: '*', request: '*' }]
     }
 
     // Sentry reporter
@@ -34,7 +34,7 @@ const GoodPlugin = {
     // @see https://github.com/fhemberger/good-influx
     if (config.influx && config.influx.endpoint) {
       reporters.sentry = [
-        Object.assign({}, squeeze, {args: [{ops: '*'}]}), // Send only 'ops' events to InfluxDB
+        Object.assign({}, squeeze, { args: [{ ops: '*' }] }), // Send only 'ops' events to InfluxDB
         {
           module: GoodInflux,
           args: [config.influx.endpoint, config.influx]
@@ -57,17 +57,15 @@ const GoodPlugin = {
     }
 
     // Console reporter
-    if (process.env.NODE_ENV !== 'production' || !reporters.sentry) {
-      reporters.console = [
-        squeeze,
-        {module: GoodConsole},
-        'stdout'
-      ]
-    }
+    reporters.console = [
+      squeeze,
+      { module: GoodConsole },
+      'stdout'
+    ]
 
     server.register({
       register: Good,
-      options: Object.assign({}, config.options, {reporters})
+      options: Object.assign({}, config.options, { reporters })
     }, (err) => {
       if (err) console.error(err)
       if (next) next()
