@@ -16,10 +16,12 @@
     "lib",
     "index.js"
   ],
+  "peerDependencies": {
+    "bak": "*"
+  },
   "dependencies": {
     "@bakjs/mongo": "latest",
     "axios": "^0.16.2",
-    "bak": "latest",
     "boom": "^5.2.0",
     "hoek": "^4.2.0",
     "joi": "^10.6.0",
