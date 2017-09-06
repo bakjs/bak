@@ -8,8 +8,10 @@
   "contributors": [
     "Pooya Parsa <pooya@fandogh.org>"
   ],
+  "peerDependencies": {
+    "@bakjs/mongo": "*"
+  },
   "dependencies": {
-    "@bakjs/mongo": "latest",
     "bcryptjs": "^2.4.3",
     "boom": "^5.2.0",
     "chalk": "^2.1.0",
