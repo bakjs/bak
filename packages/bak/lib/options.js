@@ -42,8 +42,8 @@ Options.defaults = {
   },
   connections: [],
   connection: {
-    port: 3000,
-    host: '0.0.0.0',
+    port: process.env.PORT || 3000,
+    host: process.env.HOST || '0.0.0.0',
     routes: {
       cors: undefined
     }
