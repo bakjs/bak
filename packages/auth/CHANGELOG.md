@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/bakjs/bak/compare/@bakjs/auth@0.1.4...@bakjs/auth@0.1.5) (2017-09-06)
+
+
+### Bug Fixes
+
+* make [@bakjs](https://github.com/bakjs)/mongo a peer dependency ([f7ec5c4](https://github.com/bakjs/bak/commit/f7ec5c4))
+
+
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/bakjs/bak/compare/@bakjs/auth@0.1.3...@bakjs/auth@0.1.4) (2017-09-06)
 

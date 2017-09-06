@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/auth",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -17,8 +17,8 @@
     "index.js"
   ],
   "peerDependencies": {
-    "bak": "*",
-    "@bakjs/mongo": "*"
+    "@bakjs/mongo": "*",
+    "bak": "*"
   },
   "dependencies": {
     "axios": "^0.16.2",
