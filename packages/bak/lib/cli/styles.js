@@ -11,7 +11,13 @@ module.exports = {
   // Style normal help text
   group: str => chalk.white(str),
   flags: (str, type) => {
-    let style = type.datatype === 'command' ? chalk.magenta : chalk.green
+    // Magenta for commands
+    // Green for args
+    // Dim green for options
+    if (type.datatype === 'command') {
+      return str.split(' ').map(flag => flag.startsWith('[') || flag.startsWith('<') ? chalk.green(flag) : chalk.magenta(flag)).join(' ')
+    }
+    let style = chalk.green
     if (str.startsWith('-')) style = style.dim
     return style(str)
   },
