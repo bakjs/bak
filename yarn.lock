@@ -3350,9 +3350,9 @@ supports-color@^4.0.0:
   dependencies:
     has-flag "^2.0.0"
 
-sywac@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/sywac/-/sywac-1.1.0.tgz#3c837efa8a5a71a3141bf4acbd954ec7c97d76be"
+sywac@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/sywac/-/sywac-1.2.0.tgz#b0a05c4e0f459918e8e42e0f55e1c1039a0e975c"
 
 table@^4.0.1:
   version "4.0.1"
