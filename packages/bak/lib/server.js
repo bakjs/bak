@@ -3,7 +3,6 @@ const Hapi = require('hapi')
 const { resolve } = require('path')
 const { serial, parallel } = require('items-promise')
 const { normalizePath } = require('./utils')
-const Controller = require('./controller')
 
 module.exports = class Server {
   /**
