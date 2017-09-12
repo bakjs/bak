@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/bakjs/bak/compare/bak@1.1.3...bak@1.1.4) (2017-09-12)
+
+
+
+
+**Note:** Version bump only for package bak
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/bakjs/bak/compare/bak@1.1.2...bak@1.1.3) (2017-09-06)
 
