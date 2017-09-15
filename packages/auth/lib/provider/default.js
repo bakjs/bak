@@ -88,7 +88,7 @@ class AuthDefaultProvider extends AuthBaseProvider {
     await user.save()
 
     // Notify user model
-    user.afterLogin({ request, session })
+    await user.afterLogin({ request, session })
 
     // Sign session token
     let secret = client ? client.secret : this.options.secret
@@ -159,7 +159,7 @@ class AuthDefaultProvider extends AuthBaseProvider {
     else user.sessions = []
 
     // Notify user model
-    user.afterLogout({ session, request })
+    await user.afterLogout({ session, request })
 
     return user.save()
   }
