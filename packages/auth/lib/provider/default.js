@@ -154,7 +154,7 @@ class AuthDefaultProvider extends AuthBaseProvider {
     return { token, user }
   }
 
-  logout ({ user, session, request }) {
+  async logout ({ user, session, request }) {
     if (session) user.sessions.remove(session)
     else user.sessions = []
 
