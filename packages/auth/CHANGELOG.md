@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/bakjs/bak/compare/@bakjs/auth@0.1.5...@bakjs/auth@0.1.6) (2017-09-15)
+
+
+### Bug Fixes
+
+* **auth:** await on afterLogin and afterLogout ([1195e82](https://github.com/bakjs/bak/commit/1195e82))
+
+
+
+
 <a name="0.1.5"></a>
 ## [0.1.5](https://github.com/bakjs/bak/compare/@bakjs/auth@0.1.4...@bakjs/auth@0.1.5) (2017-09-06)
 
