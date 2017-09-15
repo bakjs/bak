@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/bakjs/bak/compare/@bakjs/auth@0.1.6...@bakjs/auth@0.1.7) (2017-09-15)
+
+
+### Bug Fixes
+
+* **auth:** missing async keyword ([39f159c](https://github.com/bakjs/bak/commit/39f159c))
+
+
+
+
 <a name="0.1.6"></a>
 ## [0.1.6](https://github.com/bakjs/bak/compare/@bakjs/auth@0.1.5...@bakjs/auth@0.1.6) (2017-09-15)
 
