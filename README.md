@@ -2,7 +2,7 @@
 <a href="https://bak.js.org">
     <img src="https://github.com/bakjs/bak/raw/dev/artwork/logo.webp" width="400px">
 </a>
-</p>
+
 
 <br> <p align="center">Delightful and modern web applications framework based on Hapi.js</p> <br>
 
@@ -77,35 +77,9 @@ Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http:/
 
 ![image](https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png)
 
+# Plugins
 
-<h1 align="center">Packages</h1>
-
-### bak
-- [Source](./packages/bak)
-
-This is the core package, containing CLI binaries, Controller, Utils and more. 
-
-### auth
-- [Source](./packages/auth)
-
-### logging
-- [Source](./packages/logging)
-
-### minio
-- [Source](./packages/minio)
-
-### mongo
-- [Source](./packages/mongo)
-
-### nunjucks
-- [Source](./packages/nunjucks)
-
-
-### policy
-- [Source](./packages/policy)
-
-### ratelimit
-- [Source](./packages/ratelimit)
+For common and production ready hapi plugins that can be used with BAK, see [hapi-plugins](https://github.com/bakjs/hapi-plugins).
 
 # License
 Released under The MIT [LICENSE](./LICENSE).       
