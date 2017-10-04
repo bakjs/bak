@@ -3,7 +3,7 @@
     <img src="./.assets/logo.webp" width="250px">
 </a>
 
-<br> <p align="center">Delightful and modern web applications framework</p> <br>
+<p align="center">Delightful and modern web applications framework</p>
 
 <p align="center">
 <a href="https://github.com/bakjs/bak">
@@ -15,6 +15,7 @@
 <a href="https://www.npmjs.com/package/bak">
     <img alt="" src="https://img.shields.io/npm/v/bak.svg?style=flat-square">
 </a>
+<br>
 <a href="https://github.com/bakjs/bak">
     <img alt="" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square">
 </a>
@@ -74,10 +75,10 @@ yarn bak start
 Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png" width="300px">
+    <img src="https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png" width="600px">
 </p>
 
-## plugins
+<h2 align="center">Hapi Plugins</h2>
 
 See [hapi-plugins](https://github.com/bakjs/hapi-plugins).
 
