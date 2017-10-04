@@ -1,8 +1,7 @@
 <p align="center">
 <a href="https://bak.js.org">
-    <img src="https://github.com/bakjs/bak/raw/dev/artwork/logo.webp" width="400px">
+    <img src="./.assets/logo.webp" width="400px">
 </a>
-
 
 <br> <p align="center">Delightful and modern web applications framework based on Hapi.js</p> <br>
 
