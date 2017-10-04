@@ -21,6 +21,12 @@
 <a href="https://github.com/bakjs/bak">
     <img alt="" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square">
 </a>
+<a href="https://circleci.com/gh/bakjs/bak">
+    <img alt="" src="https://img.shields.io/circleci/project/github/bakjs/bak.svg?style=flat-square">
+</a>
+<a href="https://codecov.io/gh/bakjs/bakle">
+    <img alt="" src="https://img.shields.io/codecov/c/github/bakjs/bak.svg?style=flat-square">
+</a>
 </p>
 
 <h1 align="center">Features</h1>

@@ -9,8 +9,8 @@
     "Pooya Parsa <pooya@fandogh.org>"
   ],
   "scripts": {
-    "lint": "eslint lib examples",
-    "test": "npm run lint",
+    "lint": "eslint lib test examples",
+    "test": "npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish",
     "prepare": "npm run test"
   },
@@ -21,6 +21,11 @@
     "lib",
     "bin"
   ],
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "boom": "^5.2.0",
@@ -36,13 +41,18 @@
     "sywac": "^1.2.0"
   },
   "devDependencies": {
+    "axios": "^0.16.2",
+    "codecov": "^2.3.0",
     "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-html": "^3.2.2",
     "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.2.0",
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jest": "^21.2.1",
+    "jsdom": "^11.3.0",
     "lerna": "^2.3.1",
     "standard-version": "^4.2.0"
   }

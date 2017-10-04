@@ -3,3 +3,5 @@
 node_modules
 *.log
 packages/*/yarn.lock
+.vscode
+coverage

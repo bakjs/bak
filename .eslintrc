@@ -2,5 +2,11 @@
     "extends": "standard",
     "rules": {
         "camelcase": "off"
+    },
+    "plugins": [
+        "jest"
+    ],
+    "env": {
+        "jest/globals": true
     }
 }
