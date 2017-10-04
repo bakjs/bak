@@ -8,6 +8,19 @@
   "contributors": [
     "Pooya Parsa <pooya@fandogh.org>"
   ],
+  "scripts": {
+    "lint": "eslint lib src test",
+    "test": "npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "prepare": "npm run test"
+  },
+  "eslintIgnore": [
+    "*.template.*"
+  ],
+  "files": [
+    "lib",
+    "bin"
+  ],
   "peerDependencies": {
     "@bakjs/mongo": "*"
   },
@@ -25,5 +38,16 @@
     "pretty-error": "^2.1.1",
     "strip-ansi": "^4.0.0",
     "sywac": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-html": "^3.2.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "lerna": "^2.3.1",
+    "standard-version": "^4.2.0"
   }
 }
