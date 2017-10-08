@@ -60,8 +60,8 @@ const { Controller } = require('bak')
 
 module.exports class APIController extends Controller {
   // Auto magically creates /api/hello/{name} route
-  hello_$name (request, reply) {
-    reply('Hello ' + request.params.name)
+  hello_$name (request, h) {
+    return 'Hello ' + request.params.name
   }
 }
 ```

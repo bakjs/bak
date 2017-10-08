@@ -2,7 +2,7 @@ const { Controller } = require('bak')
 
 class APIController extends Controller {
   hello_$$name (request, reply) {
-    reply('Hello ' + request.params.name)
+    return 'Hello ' + request.params.name
   }
 }
 

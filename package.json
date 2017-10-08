@@ -31,7 +31,7 @@
     "boom": "^6.0.0",
     "chalk": "^2.1.0",
     "config": "^1.26.2",
-    "hapi": "^16.6.0",
+    "hapi": "^17.0.0-rc6",
     "items-promise": "^1.0.0",
     "jsonwebtoken": "^8.0.1",
     "lodash": "^4.17.4",

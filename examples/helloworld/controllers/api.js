@@ -1,8 +1,10 @@
 const { Controller } = require('../../..')
 
 class APIController extends Controller {
-  hello_$$name (request, reply) {
-    reply('Hello ' + request.params.name)
+  hello_$$name (request, h) {
+    return {
+      name: request.params.name
+    }
   }
 }
 

@@ -4,7 +4,7 @@ module.exports = {
   routes: [
     './controllers/api'
   ],
-  connection: {
-    port: 4050
+  server: {
+    port: '6565'
   }
 }

@@ -1,5 +1,4 @@
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000
-process.env.PORT = process.env.PORT || 5060
 process.env.SUPPRESS_NO_CONFIG_WARNING = true
 
 const axios = require('axios')
@@ -13,7 +12,7 @@ function setup (name) {
   this.bak = new Bak(config)
 
   // Helpers
-  this.url = path => `http://localhost:${config.connection.port}${path}`
+  this.url = path => `http://localhost:${config.server.port}${path}`
   this.get = (url, ...args) => axios.get(this.url(url), ...args).then(r => r.data)
 
   beforeAll(async () => {
