@@ -2,6 +2,7 @@
 <a href="https://bak.js.org">
     <img src="./.assets/logo.webp" width="300px" alt="Bak.js">
 </a>
+</p>
 
 <p align="center">Delightful modern web applications framework for hapi.js</p>
 
@@ -33,7 +34,7 @@
 
 ✓ Built on top of [hapi.js](https://hapijs.com), A rich framework for building applications and services
 
-✓ Controller for routing
+✓ Optionally using Controllers for routing
 
 ✓ Single file configuration without need to extra boilerplate
 
