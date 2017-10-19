@@ -1,7 +1,7 @@
 {
   "name": "bak",
-  "version": "1.1.4",
-  "description": "Delightful and modern web applications framework based on Hapi.js",
+  "version": "2.0.0",
+  "description": "Delightful modern web applications framework for hapi.js",
   "repository": "https://github.com/bakjs/bak",
   "main": "lib/index.js",
   "bin": "bin/bak",
@@ -14,9 +14,6 @@
     "release": "standard-version && git push --follow-tags && npm publish",
     "prepare": "npm run test"
   },
-  "eslintIgnore": [
-    "*.template.*"
-  ],
   "files": [
     "lib",
     "bin"

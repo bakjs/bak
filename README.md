@@ -1,9 +1,9 @@
 <p align="center">
 <a href="https://bak.js.org">
-    <img src="./.assets/logo.webp" width="250px">
+    <img src="./.assets/logo.webp" width="300px">
 </a>
 
-<p align="center">Delightful and modern web applications framework</p>
+<p align="center">Delightful modern web applications framework for hapi.js</p>
 
 <p align="center">
 <a href="https://github.com/bakjs/bak">
@@ -33,6 +33,8 @@
 - Controller for routing
 - Single file configuration without need to extra boilerplate
 - CLI & Dev friendly tools
+- Stable and rich echo-system of hapi compatible [plugins](https://github.com/bakjs/plugins)
+- Modular design without modifying core
 
 <h2 align="center">Getting started</h2>
 
@@ -77,10 +79,6 @@ Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http:/
 <p align="center">
     <img src="https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png" width="600px">
 </p>
-
-<h2 align="center">Hapi Plugins</h2>
-
-See [hapi-plugins](https://github.com/bakjs/hapi-plugins).
 
 # License
 
