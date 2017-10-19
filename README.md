@@ -1,4 +1,11 @@
 <p align="center">
+<a href="https://bak.js.org">
+    <img src="./.assets/logo.webp" width="300px" alt="Bak.js">
+</a>
+
+<p align="center">Delightful modern web applications framework for hapi.js</p>
+
+<p align="center">
 <a href="https://github.com/bakjs/bak">
     <img alt="" src="https://david-dm.org/bakjs/bak.svg?style=flat-square">
 </a>
@@ -20,15 +27,7 @@
 <a href="https://hapijs.com/">
     <img alt="" src="https://img.shields.io/badge/hapi.js-17.x-yellow.svg?style=flat-square">
 </a>
-<br>
 </p>
-
-<p align="center">
-<a href="https://bak.js.org">
-    <img src="./.assets/logo.webp" width="300px">
-</a>
-
-<p align="center">Delightful modern web applications framework for hapi.js</p>
 
 <h2 align="center">Features</h2>
 
@@ -69,10 +68,12 @@ Create `controllers/api.js`:
 const { Controller } = require('bak')
 
 module.exports class APIController extends Controller {
+
   // Auto magically creates /api/hello/{name} route
   hello_$name (request, h) {
     return 'Hello ' + request.params.name
   }
+
 }
 ```
 
@@ -85,9 +86,11 @@ yarn bak start
 Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/5158436/30007047-00bb3d3a-911b-11e7-85c6-2cdeddfdeed9.png" width="600px">
+    <img src="https://user-images.githubusercontent.com/5158436/31769331-02954518-b4e0-11e7-80c1-b3776a868e5d.png" width="500px">
 </p>
 
-# License
+<h2 align="center">License</h2>
+      
+Copyright (c) 2016-2017 Fandogh - Pooya Parsa
 
-Released under The MIT [License](./LICENSE). Copyright (c) 2016-2017 Pooya Parsa - [Fandogh](https://fandogh.org)
+Released under The MIT [LICENSE](./LICENSE)
