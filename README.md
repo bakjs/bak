@@ -29,12 +29,12 @@
 
 <h2 align="center">Features</h2>
 
-- Built on top of [hapi.js](https://hapijs.com), A rich framework for building applications and services
-- Controller for routing
-- Single file configuration without need to extra boilerplate
-- CLI & Dev friendly tools
-- Stable and rich echo-system of hapi compatible [plugins](https://github.com/bakjs/plugins)
-- Modular design without modifying core
+✓ Built on top of [hapi.js](https://hapijs.com), A rich framework for building applications and services
+✓ Controller for routing
+✓ Single file configuration without need to extra boilerplate
+✓ CLI & Dev friendly tools
+✓ Stable and rich echo-system of hapi compatible [plugins](https://github.com/bakjs/plugins)
+✓ Modular design without modifying core
 
 <h2 align="center">Getting started</h2>
 
