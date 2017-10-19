@@ -1,11 +1,4 @@
 <p align="center">
-<a href="https://bak.js.org">
-    <img src="./.assets/logo.webp" width="300px">
-</a>
-
-<p align="center">Delightful modern web applications framework for hapi.js</p>
-
-<p align="center">
 <a href="https://github.com/bakjs/bak">
     <img alt="" src="https://david-dm.org/bakjs/bak.svg?style=flat-square">
 </a>
@@ -15,7 +8,6 @@
 <a href="https://www.npmjs.com/package/bak">
     <img alt="" src="https://img.shields.io/npm/v/bak.svg?style=flat-square">
 </a>
-<br>
 <a href="https://github.com/bakjs/bak">
     <img alt="" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square">
 </a>
@@ -25,15 +17,31 @@
 <a href="https://codecov.io/gh/bakjs/bak">
     <img alt="" src="https://img.shields.io/codecov/c/github/bakjs/bak.svg?style=flat-square">
 </a>
+<a href="https://hapijs.com/">
+    <img alt="" src="https://img.shields.io/badge/hapi.js-17.x-yellow.svg?style=flat-square">
+</a>
+<br>
 </p>
+
+<p align="center">
+<a href="https://bak.js.org">
+    <img src="./.assets/logo.webp" width="300px">
+</a>
+
+<p align="center">Delightful modern web applications framework for hapi.js</p>
 
 <h2 align="center">Features</h2>
 
 ✓ Built on top of [hapi.js](https://hapijs.com), A rich framework for building applications and services
+
 ✓ Controller for routing
+
 ✓ Single file configuration without need to extra boilerplate
+
 ✓ CLI & Dev friendly tools
+
 ✓ Stable and rich echo-system of hapi compatible [plugins](https://github.com/bakjs/plugins)
+
 ✓ Modular design without modifying core
 
 <h2 align="center">Getting started</h2>
