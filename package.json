@@ -27,16 +27,17 @@
     "collectCoverage": true
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "@bakjs/compat": "^2.0.0",
+    "@bakjs/input": "^2.0.0",
+    "@bakjs/route-table": "^2.0.0",
+    "@bakjs/shortcuts": "^2.0.0",
     "boom": "^6.0.0",
     "chalk": "^2.2.0",
     "config": "^1.27.0",
     "hapi": "^17.0.0-rc8",
     "items-promise": "^1.0.0",
-    "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
     "pretty-error": "^2.1.1",
-    "strip-ansi": "^4.0.0",
     "sywac": "^1.2.0"
   },
   "devDependencies": {
