@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@bakjs/compat@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@bakjs/compat/-/compat-2.0.0.tgz#f2a1b3bd72a7e612f2d1de4d782583fe39ac3dbc"
-
 "@bakjs/input@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@bakjs/input/-/input-2.0.0.tgz#2229a1f2484110ce4e36029a9eca8acb47d51ff9"
@@ -491,6 +487,12 @@ call@5.x.x:
   dependencies:
     boom "6.x.x"
     hoek "5.x.x"
+
+caller-id@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/caller-id/-/caller-id-0.1.0.tgz#59bdac0893d12c3871408279231f97458364f07b"
+  dependencies:
+    stack-trace "~0.0.7"
 
 caller-path@^0.1.0:
   version "0.1.0"
@@ -1591,6 +1593,15 @@ handlebars@^4.0.2, handlebars@^4.0.3:
   optionalDependencies:
     uglify-js "^2.6"
 
+hapi-compat@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hapi-compat/-/hapi-compat-1.0.1.tgz#bf9901b64079b4d2661c2553545a6d9cb1ebb688"
+  dependencies:
+    caller-id "^0.1.0"
+    chalk "^2.2.0"
+    hoek "^5.0.0"
+    joi "^13.0.1"
+
 hapi@^17.0.0-rc8:
   version "17.0.0-rc8"
   resolved "https://registry.yarnpkg.com/hapi/-/hapi-17.0.0-rc8.tgz#53b8f179410e309f9d6c7acd4d349ccf5b3d2865"
@@ -1701,7 +1712,7 @@ hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
-hoek@5.x.x:
+hoek@5.x.x, hoek@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-5.0.0.tgz#b88953e0fec8e58082e4abd223ed20915d535831"
 
@@ -2308,6 +2319,14 @@ joi@11.x.x:
 joi@13.x.x:
   version "13.0.0"
   resolved "https://registry.yarnpkg.com/joi/-/joi-13.0.0.tgz#9bfb1603164cac8787350ff6d41ea9769780707e"
+  dependencies:
+    hoek "5.x.x"
+    isemail "3.x.x"
+    topo "3.x.x"
+
+joi@^13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-13.0.1.tgz#97df285450e3ff5bc4db9eccf40a1cd5cf3ec189"
   dependencies:
     hoek "5.x.x"
     isemail "3.x.x"
@@ -3445,6 +3464,10 @@ sshpk@^1.7.0:
     ecc-jsbn "~0.1.1"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
+
+stack-trace@~0.0.7:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
 
 standard-version@^4.2.0:
   version "4.2.0"
