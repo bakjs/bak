@@ -1602,9 +1602,9 @@ hapi-compat@^1.0.1:
     hoek "^5.0.0"
     joi "^13.0.1"
 
-hapi@^17.0.0-rc8:
-  version "17.0.0-rc8"
-  resolved "https://registry.yarnpkg.com/hapi/-/hapi-17.0.0-rc8.tgz#53b8f179410e309f9d6c7acd4d349ccf5b3d2865"
+hapi@^17.0.0-rc9:
+  version "17.0.0-rc9"
+  resolved "https://registry.yarnpkg.com/hapi/-/hapi-17.0.0-rc9.tgz#639d26b3eb91c44ba31254fab9e66ec29575068a"
   dependencies:
     accept "3.x.x"
     ammo "3.x.x"
