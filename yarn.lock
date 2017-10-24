@@ -6,6 +6,12 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@bakjs/input/-/input-2.0.0.tgz#2229a1f2484110ce4e36029a9eca8acb47d51ff9"
 
+"@bakjs/logging@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@bakjs/logging/-/logging-2.2.0.tgz#fd71dee68dc22f87f96992de439f788804e6f861"
+  dependencies:
+    pretty-error "^2.1.1"
+
 "@bakjs/route-table@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@bakjs/route-table/-/route-table-2.0.0.tgz#c5e06fcb66e40e2d0aea69fd82cbdac45ac1f67b"
