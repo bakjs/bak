@@ -1,7 +1,11 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/bakjs/bak/compare/2.0.0...2.0.1) (2017-11-09)
+
+
 
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/bakjs/bak/compare/bak@1.1.3...bak@1.1.4) (2017-09-12)
