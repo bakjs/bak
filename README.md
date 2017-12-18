@@ -66,16 +66,17 @@ module.exports = {
 Create `controllers/api.js`:
 
 ```js
-const { Controller } = require('bak')
-
-module.exports class APIController extends Controller {
-
-  // Auto magically creates /api/hello/{name} route
-  hello_$name (request, h) {
-    return 'Hello ' + request.params.name
+class APIController extends Controller {
+  init () {
+    this.get('/hello/{name}', this.hello)
   }
 
+  hello (request, reply) {
+    return 'Hello ' + request.params.name
+  }
 }
+
+module.exports = APIController
 ```
 
 Start server:
@@ -85,10 +86,6 @@ yarn bak start
 ```
 
 Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results.
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/5158436/31769331-02954518-b4e0-11e7-80c1-b3776a868e5d.png" width="500px">
-</p>
 
 <h2 align="center">License</h2>
       

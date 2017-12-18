@@ -1,7 +1,11 @@
 const { Controller } = require('bak')
 
 class APIController extends Controller {
-  hello_$$name (request, reply) {
+  init () {
+    this.get('/hello/{name}', this.hello)
+  }
+
+  hello (request, reply) {
     return 'Hello ' + request.params.name
   }
 }
