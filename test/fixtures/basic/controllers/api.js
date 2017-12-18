@@ -1,4 +1,4 @@
-const { Controller } = require('bak')
+const { Controller } = require('../../../..')
 
 class APIController extends Controller {
   init () {
