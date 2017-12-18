@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/bakjs/bak/compare/v2.0.3...v3.0.0) (2017-12-18)
+
+
+### Features
+
+* new Controller API ([0c4a663](https://github.com/bakjs/bak/commit/0c4a663))
+
+
+### BREAKING CHANGES
+
+* every project relies on Current auto routing should now defind routes in init() method. See readme and examples.
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/bakjs/bak/compare/v2.0.2...v2.0.3) (2017-11-29)
 
