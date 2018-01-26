@@ -1,18 +1,23 @@
 {
   "name": "bak",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Delightful modern web applications framework for hapi.js",
   "repository": "https://github.com/bakjs/bak",
   "main": "lib/index.js",
   "bin": "bin/bak",
-  "contributors": ["Pooya Parsa <pooya@fandogh.org>"],
+  "contributors": [
+    "Pooya Parsa <pooya@fandogh.org>"
+  ],
   "scripts": {
     "lint": "eslint lib test examples",
     "test": "npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish",
     "prepare": "npm run test"
   },
-  "files": ["lib", "bin"],
+  "files": [
+    "lib",
+    "bin"
+  ],
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",
