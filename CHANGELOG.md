@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/bakjs/bak/compare/v3.0.7...v3.1.0) (2018-02-08)
+
+
+### Features
+
+* upgrade [@bakjs](https://github.com/bakjs)/logging ([ef23430](https://github.com/bakjs/bak/commit/ef23430))
+
+
+
 <a name="3.0.7"></a>
 ## [3.0.7](https://github.com/bakjs/bak/compare/v3.0.6...v3.0.7) (2018-01-28)
 
