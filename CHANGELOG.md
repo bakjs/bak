@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/bakjs/bak/compare/v3.1.0...v4.0.0) (2018-02-08)
+
+
+### Features
+
+* devErrors ([73b2ea7](https://github.com/bakjs/bak/commit/73b2ea7))
+
+
+### misc
+
+* **server:** remove implicit config option handling ([8ea4a5a](https://github.com/bakjs/bak/commit/8ea4a5a))
+
+
+### BREAKING CHANGES
+
+* **server:** plugin options should be explicitly defined in bak.config.js
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/bakjs/bak/compare/v3.0.7...v3.1.0) (2018-02-08)
 
