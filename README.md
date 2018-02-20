@@ -66,6 +66,8 @@ module.exports = {
 Create `controllers/api.js`:
 
 ```js
+const  {Controller} = require("bak")
+
 class APIController extends Controller {
   init () {
     this.get('/hello/{name}', this.hello)
