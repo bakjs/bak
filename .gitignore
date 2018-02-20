@@ -5,3 +5,4 @@ node_modules
 packages/*/yarn.lock
 .vscode
 coverage
+.DS_STORE
