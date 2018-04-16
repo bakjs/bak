@@ -1,2 +1,5 @@
 #!/usr/bin/env node
-require('../lib/cli').parseAndExit().catch(console.error)
+
+const consola = require('consola')
+
+require('../lib/cli').parseAndExit().catch(consola.fatal)
