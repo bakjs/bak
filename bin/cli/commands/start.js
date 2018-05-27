@@ -1,20 +1,13 @@
-const path = require('path')
 const chalk = require('chalk')
 const consola = require('consola')
+const { parseArgs } = require('../utils')
 
 module.exports = {
   flags: 'start [dir]',
-  desc: 'Start Server',
-  paramsDesc: 'Root directory of app, containing config file',
+  desc: 'Start server',
+  paramsDesc: 'Root directory of app, containing bak.config.js config file',
   async run (argv) {
-    const rootDir = path.resolve(process.cwd(), argv.dir || '')
-    const configPath = path.resolve(rootDir, argv.config)
-    const config = require(configPath)
-
-    // Root Dir
-    if (!config.relativeTo) {
-      config.relativeTo = rootDir
-    }
+    const { config } = parseArgs(argv)
 
     // Delay loading framework until command is actually run
     const { Bak } = require('../../..')
