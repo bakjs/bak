@@ -1,6 +1,6 @@
-const { Controller } = require('../../..')
+import { Controller } from '../../..'
 
-class APIController extends Controller {
+export default class APIController extends Controller {
   init () {
     this.get('/hello/{name}', this.hello)
     this.get('/error', this.error)
@@ -14,5 +14,3 @@ class APIController extends Controller {
     return h('foo')
   }
 }
-
-module.exports = APIController
