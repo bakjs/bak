@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/bakjs/bak/compare/v4.0.2...v4.1.0) (2018-05-27)
+
+
+### Bug Fixes
+
+* default config value to 'bak.config.js' ([30d0388](https://github.com/bakjs/bak/commit/30d0388))
+* don't replace 0.0.0.0 with hostname ([2addad5](https://github.com/bakjs/bak/commit/2addad5))
+* **bak:** disable relative resolve by default ([aa2fd4e](https://github.com/bakjs/bak/commit/aa2fd4e))
+* use simpler type checkings ([260d756](https://github.com/bakjs/bak/commit/260d756))
+
+
+### Features
+
+* **cli:** development mode support with `bak dev` ([d90c729](https://github.com/bakjs/bak/commit/d90c729))
+* fully support esm for route, controllers and plugins ([3cd74d7](https://github.com/bakjs/bak/commit/3cd74d7))
+* use [@bakjs](https://github.com/bakjs)/dev-errors ([0869214](https://github.com/bakjs/bak/commit/0869214))
+* use consola ([eccbdcd](https://github.com/bakjs/bak/commit/eccbdcd))
+* use std-env to detect dev mode by default ([d260238](https://github.com/bakjs/bak/commit/d260238))
+* **cli:** support esm in bak.config.js ([023f9c6](https://github.com/bakjs/bak/commit/023f9c6))
+* **cli:** use rootdir/bak.config.js as default value ([a3d8986](https://github.com/bakjs/bak/commit/a3d8986))
+* **server:** support esm export default for plugins and routes ([345bbc0](https://github.com/bakjs/bak/commit/345bbc0))
+
+
+
 <a name="4.0.2"></a>
 ## [4.0.2](https://github.com/bakjs/bak/compare/v4.0.1...v4.0.2) (2018-04-12)
 
