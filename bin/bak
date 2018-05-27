@@ -2,4 +2,4 @@
 
 const consola = require('consola')
 
-require('../lib/cli').parseAndExit().catch(consola.fatal)
+require('./cli').parseAndExit().catch(consola.fatal)

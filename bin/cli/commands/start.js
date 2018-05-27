@@ -17,7 +17,7 @@ module.exports = {
     }
 
     // Delay loading framework until command is actually run
-    const { Bak } = require('../..')
+    const { Bak } = require('../../..')
 
     // Create server instance
     const bak = new Bak(config)
@@ -25,6 +25,9 @@ module.exports = {
     // Start server
     await bak.init()
 
-    consola.log('\n' + chalk.bgGreen.black(' OPEN ') + ' ' + chalk.green(bak.server.hapi.info.uri))
+    consola.ready({
+      message: `Listening on ${chalk.blue.underline(bak.server.hapi.info.uri)}`,
+      badge: true
+    })
   }
 }
