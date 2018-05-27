@@ -15,11 +15,11 @@ function setup (name) {
   this.url = path => `http://localhost:${config.server.port}${path}`
   this.get = (url, ...args) => axios.get(this.url(url), ...args).then(r => r.data)
 
-  beforeAll(async () => {
+  this.init = () => test('init server', async () => {
     await this.bak.init()
   })
 
-  afterAll(async () => {
+  this.stop = () => test('stop server', async () => {
     await this.bak.server.hapi.stop()
   })
 }
