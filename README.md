@@ -84,33 +84,11 @@ module.exports = APIController
 Start server:
 
 ```bash
-yarn bak start
+yarn bak dev # Use `yarn bak start` for production mode
 ```
 
 Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results.
 
-<h2 align="center">Adding nodemon</h2>
-
-Install `nodemon` package:
-
-```bash
-yarn add nodemon
-```
-
-Change `scripts` in `package.json` like this:
-
-```json
-"scripts": {
-    "start": "bak start",
-    "dev": "nodemon"
-}
-```
-
-Start server with `nodemon`:
-
-```bash
-yarn dev
-``` 
 <h2 align="center">License</h2>
       
 Copyright (c) 2016-2017 Fandogh - Pooya Parsa
