@@ -55,7 +55,7 @@ yarn add bak
 Create `bak.config.js`;
 
 ```js
-module.exports = {
+export default {
   prefix: '/api',
   routes: [
     './controllers/api'
@@ -66,9 +66,9 @@ module.exports = {
 Create `controllers/api.js`:
 
 ```js
-const  {Controller} = require("bak")
+import { Controller } from 'bak'
 
-class APIController extends Controller {
+export default class APIController extends Controller {
   init () {
     this.get('/hello/{name}', this.hello)
   }
@@ -77,8 +77,6 @@ class APIController extends Controller {
     return 'Hello ' + request.params.name
   }
 }
-
-module.exports = APIController
 ```
 
 Start server:
@@ -90,7 +88,5 @@ yarn bak dev # Use `yarn bak start` for production mode
 Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results.
 
 <h2 align="center">License</h2>
-      
-Copyright (c) 2016-2017 Fandogh - Pooya Parsa
 
 Released under The MIT [LICENSE](./LICENSE)
