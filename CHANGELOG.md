@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.1.2"></a>
+## [4.1.2](https://github.com/bakjs/bak/compare/v4.1.1...v4.1.2) (2018-07-03)
+
+
+### Bug Fixes
+
+* **server.js:** check for nested plugin props ([#14](https://github.com/bakjs/bak/issues/14)) ([ce3a3ca](https://github.com/bakjs/bak/commit/ce3a3ca))
+
+
+
 <a name="4.1.1"></a>
 ## [4.1.1](https://github.com/bakjs/bak/compare/v4.1.0...v4.1.1) (2018-05-31)
 
