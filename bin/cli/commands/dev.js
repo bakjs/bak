@@ -33,7 +33,7 @@ module.exports = {
     nodemon.on('crash', () => {
       consola.error({
         type: 'Crash',
-        message: 'Server has been crashed!',
+        message: 'Server has crashed!',
         additional: 'Fix code or use `rs` command to restart server immediately.'
       })
     })
