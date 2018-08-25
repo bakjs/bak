@@ -49,7 +49,7 @@ module.exports = {
     nodemon.on('restart', (files = []) => {
       consola.info({
         type: 'Reload',
-        message: 'Reloading server due to file changes',
+        message: files.length ? 'Reloading server due to file changes' : 'Restarting server',
         additional: files.join('\n')
       })
     })
