@@ -41,7 +41,7 @@ module.exports = {
     nodemon.on('quit', () => {
       consola.success({
         type: 'bye',
-        message: 'Server gracefuly stopped'
+        message: 'Server gracefully stopped'
       })
       process.exit(0)
     })
