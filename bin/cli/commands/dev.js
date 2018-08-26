@@ -8,19 +8,20 @@ module.exports = {
   desc: 'Start development server with auto-reload',
   paramsDesc: 'Root directory of app, containing bak.config.js config file',
   async run (argv) {
-    const { rootDir, config } = parseArgs(argv)
+    const { rootDir, config, extraArgs } = parseArgs(argv)
 
     const nodemon = require('nodemon')
 
     // https://github.com/remy/nodemon/blob/master/doc/requireable.md
-    nodemon(Object.assign({
+    const nodemonConfig = Object.assign({
       cwd: rootDir,
       script: path.resolve(__dirname, '../../bak'),
       args: [
         'start',
         rootDir
-      ]
-    }, config.nodemon))
+      ],
+      nodeArgs: extraArgs
+    }, config.nodemon)
 
     // https://github.com/remy/nodemon/blob/master/doc/events.md
     nodemon.on('start', () => {
@@ -53,5 +54,7 @@ module.exports = {
         additional: files.join('\n')
       })
     })
+
+    nodemon(nodemonConfig)
   }
 }

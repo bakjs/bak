@@ -11,6 +11,19 @@ module.exports.parseArgs = (argv) => {
   const configPath = path.resolve(rootDir, argv.config)
   const config = requireESM(configPath)
 
+  // Extra args
+  const extraArgs = []
+  let extra = false
+  for (let arg of process.argv) {
+    if (arg === '--') {
+      extra = true
+      continue
+    }
+    if (extra) {
+      extraArgs.push(arg)
+    }
+  }
+
   // Root Dir
   if (!config.relativeTo) {
     config.relativeTo = rootDir
@@ -19,6 +32,7 @@ module.exports.parseArgs = (argv) => {
   return {
     rootDir,
     configPath,
-    config
+    config,
+    extraArgs
   }
 }
