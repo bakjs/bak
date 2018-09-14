@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Delightful modern web applications framework for hapi.js",
   "repository": "https://github.com/bakjs/bak",
   "main": "lib/index.js",
