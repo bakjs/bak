@@ -16,6 +16,7 @@ module.exports = {
     const nodemonConfig = Object.assign({
       cwd: rootDir,
       script: path.resolve(__dirname, '../../bak'),
+      restartable: 'r',
       args: [
         'start',
         rootDir
@@ -38,7 +39,7 @@ module.exports = {
       consola.error({
         type: 'Crash',
         message: 'Server has crashed!',
-        additional: 'Fix code or use `rs` command to restart server immediately.'
+        additional: 'Fix code or use `r` command to restart server immediately.'
       })
     })
 
