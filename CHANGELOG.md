@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.3.0"></a>
+# [4.3.0](https://github.com/bakjs/bak/compare/v4.2.1...v4.3.0) (2018-09-15)
+
+
+### Bug Fixes
+
+* **cli/dev:** listen on nodemon events after stating ([27642ed](https://github.com/bakjs/bak/commit/27642ed))
+
+
+### Features
+
+* **cli/dev:** restart server using r ([5fe6c29](https://github.com/bakjs/bak/commit/5fe6c29))
+
+
+
 <a name="4.2.1"></a>
 ## [4.2.1](https://github.com/bakjs/bak/compare/v4.2.0...v4.2.1) (2018-09-14)
 
