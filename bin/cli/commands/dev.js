@@ -23,6 +23,9 @@ module.exports = {
       nodeArgs: extraArgs
     }, config.nodemon)
 
+    // Start nodemon before listening for events
+    nodemon(nodemonConfig)
+
     // https://github.com/remy/nodemon/blob/master/doc/events.md
     nodemon.on('start', () => {
       consola.start({
@@ -54,7 +57,5 @@ module.exports = {
         additional: files.join('\n')
       })
     })
-
-    nodemon(nodemonConfig)
   }
 }
