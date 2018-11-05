@@ -47,10 +47,10 @@
   resolved "https://registry.yarnpkg.com/@bakjs/input/-/input-2.2.0.tgz#efb570a82dca316ff6f242382edbe8c41248bd27"
   integrity sha1-77VwqC3KMW/28kI4LtvoxBJIvSc=
 
-"@bakjs/logging@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@bakjs/logging/-/logging-2.6.0.tgz#62c9488b9d0d7ff58b0b12995bf39f6d0771880c"
-  integrity sha512-TnCU4vS9MIMUF9rOPPTR5OuoW04nY4qf/776cjXJRwkCZEI1/hpvnMHeNZ66OswrHyPOq3kpmv6zscWdqHNgAQ==
+"@bakjs/logging@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@bakjs/logging/-/logging-2.6.1.tgz#385ac5c3dcd701113f4355319948f6295f0378a7"
+  integrity sha512-8XHc0taAZ5ICwkJUmiO48JgMHsDYES72NwUpzHYX1fV5jHqEgoyY54SjnC+r9RzyiC2VlbgD08/3HEe7CfPqbg==
   dependencies:
     consola "^2.2.2"
 

@@ -26,7 +26,7 @@
   "dependencies": {
     "@bakjs/dev-errors": "^2.1.0-1",
     "@bakjs/input": "^2.2.0",
-    "@bakjs/logging": "^2.6.0",
+    "@bakjs/logging": "^2.6.1",
     "@bakjs/route-table": "^2.3.0",
     "@bakjs/shortcuts": "^2.2.0",
     "boom": "^7.2.2",
