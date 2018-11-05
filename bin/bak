@@ -2,4 +2,6 @@
 
 const consola = require('consola')
 
+consola.wrapConsole()
+
 require('./cli').parseAndExit().catch(consola.fatal)
