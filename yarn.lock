@@ -47,10 +47,12 @@
   resolved "https://registry.yarnpkg.com/@bakjs/input/-/input-2.2.0.tgz#efb570a82dca316ff6f242382edbe8c41248bd27"
   integrity sha1-77VwqC3KMW/28kI4LtvoxBJIvSc=
 
-"@bakjs/logging@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@bakjs/logging/-/logging-2.5.1.tgz#2a803be27c1beeb24b64011f41f0f1ef18f483b0"
-  integrity sha512-AN7wMkeMXmS7bVLxvaSymz0mjloPPeg3OZVvYIjT+gjjeX3ftU3X6ofIbsSviLrvSxHX3B1pvBeP492/e5FiBA==
+"@bakjs/logging@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@bakjs/logging/-/logging-2.6.0.tgz#62c9488b9d0d7ff58b0b12995bf39f6d0771880c"
+  integrity sha512-TnCU4vS9MIMUF9rOPPTR5OuoW04nY4qf/776cjXJRwkCZEI1/hpvnMHeNZ66OswrHyPOq3kpmv6zscWdqHNgAQ==
+  dependencies:
+    consola "^2.2.2"
 
 "@bakjs/route-table@^2.3.0":
   version "2.3.0"
@@ -3624,7 +3626,7 @@ jsdom@^11.5.1:
     ws "^4.0.0"
     xml-name-validator "^3.0.0"
 
-jsdom@^23.6.0:
+jsdom@^13.0.0:
   version "13.0.0"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-13.0.0.tgz#f1df2411b714a4e08d1bdc343c0a0889c688210f"
   integrity sha512-Kmq4ASMNkgpY+YufE322EnIKoiz0UWY2DRkKlU7d5YrIW4xiVRhWFrZV1fr6w/ZNxQ50wGAH5gGRzydgnmkkvw==
