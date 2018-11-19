@@ -18,8 +18,11 @@ module.exports = {
     // Start server
     await bak.init()
 
+    const { uri } = bak.server.hapi.info
+
     consola.ready({
-      message: `Listening on ${chalk.blue.underline(bak.server.hapi.info.uri)}`,
+      message: `Listening on ${chalk.blue.underline(uri.replace('0.0.0.0', 'localhost'))}` +
+        (uri.includes('0.0.0.0') ? (chalk.grey(' (all interfaces)')) : ''),
       badge: true
     })
   }

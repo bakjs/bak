@@ -16,7 +16,7 @@ module.exports = {
     const nodemonConfig = Object.assign({
       cwd: rootDir,
       script: path.resolve(__dirname, '../../bak'),
-      restartable: 'r',
+      restartable: 'rs',
       args: [
         'start',
         rootDir
@@ -29,34 +29,26 @@ module.exports = {
 
     // https://github.com/remy/nodemon/blob/master/doc/events.md
     nodemon.on('start', () => {
-      consola.start({
-        message: 'Starting server...',
-        additional: 'Working directory: ' + rootDir
-      })
+      consola.info('Starting server...')
+      consola.info('Working directory: ' + rootDir)
     })
 
     nodemon.on('crash', () => {
-      consola.error({
-        type: 'Crash',
-        message: 'Server has crashed!',
-        additional: 'Fix code or use `r` command to restart server immediately.'
-      })
+      consola.fatal('Server has crashed!')
+      consola.info('Fix code or use `rs` command to restart server immediately.')
     })
 
     nodemon.on('quit', () => {
-      consola.success({
-        type: 'bye',
-        message: 'Server gracefully stopped'
-      })
+      consola.info('Server gracefully stopped!')
       process.exit(0)
     })
 
     nodemon.on('restart', (files = []) => {
-      consola.info({
-        type: 'Reload',
-        message: files.length ? 'Reloading server due to file changes' : 'Restarting server',
-        additional: files.join('\n')
-      })
+      if (files.length) {
+        consola.info('Reloading server due to file changes...')
+      } else {
+        consola.info('Restarting server...')
+      }
     })
   }
 }
