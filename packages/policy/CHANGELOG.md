@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/bakjs/bak/compare/@bakjs/policy@0.1.2...@bakjs/policy@2.1.2) (2018-11-19)
+
+**Note:** Version bump only for package @bakjs/policy
+
+
+
+
+
 ## [2.1.1](https://github.com/bakjs/plugins/compare/@bakjs/policy@2.1.0...@bakjs/policy@2.1.1) (2018-11-04)
 
 

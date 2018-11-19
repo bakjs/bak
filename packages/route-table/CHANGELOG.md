@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2018-11-19)
+
+
+### Features
+
+* hide scope from route-table ([e958efa](https://github.com/bakjs/bak/commit/e958efa))
+
+
+
+
+
 # [2.3.0](https://github.com/bakjs/plugins/compare/@bakjs/route-table@2.2.0...@bakjs/route-table@2.3.0) (2018-11-04)
 
 

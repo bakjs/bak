@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/logging",
-  "version": "2.6.1",
+  "version": "2.7.0",
   "repository": "bakjs/bak",
   "license": "MIT",
   "main": "lib/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/policy",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "repository": "bakjs/bak",
   "license": "MIT",
   "main": "lib/index.js",
