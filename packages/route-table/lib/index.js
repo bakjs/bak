@@ -35,20 +35,14 @@ function printRouteTable (routes) {
 
     // Auth
     let auth = NONE
-    let scope = NONE
     if (route.settings.auth) {
       auth = route.settings.auth.mode
-      // Scope
-      if (route.settings.auth.access) {
-        scope = route.settings.auth.access.map(acl => String(acl.scope.selection)).join('|')
-      }
     }
 
     return ({
       Method: route.method.toUpperCase(),
       Path: route.path,
       Auth: AUTH_MAP[auth] || AUTH_MAP[''],
-      Access: scope,
       Controller: controller,
       Function: fn
     })
@@ -95,7 +89,7 @@ function printRouteTable (routes) {
     groupedArray = groupedArray.concat(groupedRoutes[controller])
   })
 
-  Table.printTable(groupedArray, 'llccl', null, { indent: 0, rowSpace: 1 })
+  Table.printTable(groupedArray, 'llcl', null, { indent: 0, rowSpace: 1 })
 
   console.log()
 }
