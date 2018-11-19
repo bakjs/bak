@@ -1,5 +1,6 @@
 const env = require('std-env')
 const { defaultsDeep } = require('lodash')
+const consola = require('consola')
 
 const Options = module.exports = {}
 
@@ -29,6 +30,17 @@ Options.from = function (_options) {
     }
   }
 
+  // Validation errors
+  const { validate } = options.server.routes
+  if (validate.failAction === undefined) {
+    validate.failAction = async (_, __, err) => {
+      if (options.dev) {
+        consola.error(err + '')
+      }
+      throw err
+    }
+  }
+
   return options
 }
 
@@ -50,8 +62,14 @@ Options.defaults = {
     cache: null,
     port: process.env.PORT || 3000,
     host: process.env.HOST || '0.0.0.0',
+    router: {
+      stripTrailingSlash: true
+    },
     routes: {
-      cors: undefined
+      cors: undefined,
+      validate: {
+        failAction: undefined
+      }
     }
   }
 }
