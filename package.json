@@ -7,7 +7,7 @@
     "Pooya Parsa <pooya@fandogh.org>"
   ],
   "scripts": {
-    "lint": "eslint lib test examples",
+    "lint": "eslint .",
     "test": "yarn lint && jest",
     "helloworld": "yarn bak start examples/helloworld"
   },

@@ -9,7 +9,7 @@ class MemoryRateLimit {
 
     // If first time
     if (!this.limits[id]) {
-      this.limits[id] = {used: 0, time: now}
+      this.limits[id] = { used: 0, time: now }
     }
 
     // Get status
@@ -31,7 +31,7 @@ class MemoryRateLimit {
     // +1 used
     status.used++
 
-    return {limit, remaining, reset}
+    return { limit, remaining, reset }
   }
 }
 

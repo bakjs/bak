@@ -7,7 +7,7 @@ exports.register = function (server, options) {
   server.events.on(
     { name: 'request', channels: ['error', 'internal'] }, (request, { error, timestamp }, tags) => {
       if (!error) {
-       return
+        return
       }
 
       // Parse request

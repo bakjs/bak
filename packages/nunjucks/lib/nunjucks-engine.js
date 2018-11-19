@@ -8,7 +8,7 @@ module.exports = {
     }
   },
   prepare: (options, next) => {
-    options.compileOptions.environment = Nunjucks.configure(options.path, {watch: false})
+    options.compileOptions.environment = Nunjucks.configure(options.path, { watch: false })
     return next()
   }
 }

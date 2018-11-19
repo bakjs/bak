@@ -50,14 +50,14 @@ class $AuthController extends Controller {
     let { token } = await this.authProvider.login({ username, password, request })
 
     if (this.authOptions.state) {
-      h.state(this.authOptions.accessTokenName || 'token', token, Object.assign({ 
-        isSecure:false,
+      h.state(this.authOptions.accessTokenName || 'token', token, Object.assign({
+        isSecure: false,
         ttl: null,
-        path:'/' 
-      }, this.authOptions.state));  
+        path: '/'
+      }, this.authOptions.state))
     }
 
-    return h.response({ token });
+    return h.response({ token })
   }
 
   async logout (request, h) {

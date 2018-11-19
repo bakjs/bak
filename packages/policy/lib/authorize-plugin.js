@@ -13,7 +13,7 @@ exports.register = function authorizePlugin (server, options) {
       let check_fn = action
       if (!(check_fn instanceof Function)) check_fn = policies[action]
       if (!(check_fn instanceof Function)) {
-        server.log(['warning', 'authorize'], {message: 'no policy defined for ' + action})
+        server.log(['warning', 'authorize'], { message: 'no policy defined for ' + action })
         return false
       }
 
@@ -27,7 +27,7 @@ exports.register = function authorizePlugin (server, options) {
       return !!result
     } catch (error) {
       // Log and reject unhandled errors
-      server.log(['error', 'authorize'], {action, target, error})
+      server.log(['error', 'authorize'], { action, target, error })
       return false
     }
   }

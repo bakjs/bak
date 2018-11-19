@@ -19,7 +19,7 @@ exports.register = (server, options) => {
   })
 
   if (options.serveStatic !== false) {
-    server.register({register: Inert}, () => {
+    server.register({ register: Inert }, () => {
       server.route({
         method: 'GET',
         path: `${options.staticRoute || '/static'}/{param*}`,

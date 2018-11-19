@@ -49,11 +49,11 @@ class AuthBaseProvider {
     return false
   }
 
-  login ({username, password, request}) {
+  login ({ username, password, request }) {
     throw Boom.notImplemented('login not implemented')
   }
 
-  logout ({user, session, request}) {
+  logout ({ user, session, request }) {
     throw Boom.notImplemented('logout not implemented')
   }
 

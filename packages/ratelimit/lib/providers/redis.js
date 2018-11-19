@@ -2,7 +2,7 @@ const Redis = require('redis')
 const Limiter = require('ratelimiter')
 
 class RedisRateLimit {
-  constructor (options = {redis: {}}) {
+  constructor (options = { redis: {} }) {
     this.options = options
 
     this.redisClient = Redis.createClient(
@@ -13,7 +13,7 @@ class RedisRateLimit {
   }
 
   check (id, limit, duration) {
-    const routeLimiter = new Limiter({id, max: limit, duration})
+    const routeLimiter = new Limiter({ id, max: limit, duration })
 
     return new Promise((resolve, reject) => {
       routeLimiter.get((err, rateLimit) => {
