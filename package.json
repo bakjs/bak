@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "yarn lint && jest",
-    "helloworld": "yarn bak start examples/helloworld"
+    "dev": "yarn bak dev examples/helloworld"
   },
   "devDependencies": {
     "axios": "^0.18.0",
