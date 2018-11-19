@@ -1676,7 +1676,7 @@ configstore@^3.0.0:
     write-file-atomic "^2.0.0"
     xdg-basedir "^3.0.0"
 
-consola@^2.2.2:
+consola@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.3.0.tgz#256b80a927234351d512a4e5693eac9cf8a572b9"
   integrity sha512-gsawoQfj4DtnwsaPrabFpFOZBxWpzpT+E9fu6YAdFKO3NvBOOsFcQl/cskDOoIDDLMkLZvm4jjMWvSEelIumIw==

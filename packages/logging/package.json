@@ -13,6 +13,6 @@
     "lib"
   ],
   "dependencies": {
-    "consola": "^2.2.2"
+    "consola": "^2.3.0"
   }
 }

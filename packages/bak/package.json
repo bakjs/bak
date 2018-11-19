@@ -17,7 +17,7 @@
     "@bakjs/shortcuts": "^2.2.0",
     "boom": "^7.2.2",
     "chalk": "^2.4.1",
-    "consola": "^2.2.2",
+    "consola": "^2.3.0",
     "esm": "^3.0.84",
     "hapi": "^17.6.4",
     "items-promise": "^1.0.0",
