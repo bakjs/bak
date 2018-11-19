@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "yarn lint && jest",
-    "dev": "yarn bak dev examples/helloworld"
+    "dev": "yarn bak dev examples/helloworld",
+    "release": "lerna publish"
   },
   "devDependencies": {
     "axios": "^0.18.0",
