@@ -18,14 +18,6 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@bakjs/dev-errors@^2.1.0-1":
-  version "2.1.0-1"
-  resolved "https://registry.yarnpkg.com/@bakjs/dev-errors/-/dev-errors-2.1.0-1.tgz#b272ffff7f15a96be71e5dcc313c3692a79509ea"
-  integrity sha512-y0zxlA4UmU1sXPLkh5tVeZ6pn+fR5Lp4GwcFvxZmt67rVGMYjwPAkhJTHn/4Ryyulsb+IneMBHwQzCUIioonuw==
-  dependencies:
-    hoek "~5.0.3"
-    youch "~2.0.7"
-
 "@lerna/add@^3.4.1":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@lerna/add/-/add-3.4.1.tgz#d41068317e30f530df48220d256b5e79690b1877"
@@ -1450,7 +1442,7 @@ chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.1, chalk@^2.4.1:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
   integrity sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==
@@ -3300,6 +3292,14 @@ handlebars@^4.0.2, handlebars@^4.0.3:
   optionalDependencies:
     uglify-js "^3.1.4"
 
+hapi-dev-errors@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/hapi-dev-errors/-/hapi-dev-errors-3.2.0.tgz#f3b085626c41a6fe4950bd58fa00ea6f12f0992d"
+  integrity sha512-5O+orIF1rgZEAVjKXF8QyFQB2yQCMwBeRqSRtqlXK0hgbXIRC7Lu/w26aL890rw5afYZG6kU9EJFiFU0ysDyxQ==
+  dependencies:
+    youch "~2.0.10"
+    youch-terminal "~1.0.0"
+
 hapi@^17.6.4:
   version "17.7.0"
   resolved "https://registry.yarnpkg.com/hapi/-/hapi-17.7.0.tgz#7d335e161fcfef5cc7f2a0aa090ccf9169f9382a"
@@ -3415,11 +3415,6 @@ hoek@6.x.x, hoek@^6.0.1:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-6.0.3.tgz#7884360426d927865a0a1251fc9c59313af5b798"
   integrity sha512-TU6RyZ/XaQCTWRLrdqZZtZqwxUVr6PDMfi6MlWNURZ7A6czanQqX4pFE1mdOUQR9FdPCsZ0UzL8jI/izZ+eBSQ==
-
-hoek@~5.0.3:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/hoek/-/hoek-5.0.4.tgz#0f7fa270a1cafeb364a4b2ddfaa33f864e4157da"
-  integrity sha512-Alr4ZQgoMlnere5FZJsIyfIjORBqZll5POhDsF4q64dPuJR6rNxXdDxtHSQq8OXRurhmx+PWYEE8bXRROY8h0w==
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -7840,7 +7835,14 @@ yargs@^8.0.1:
     y18n "^3.2.1"
     yargs-parser "^7.0.0"
 
-youch@~2.0.7:
+youch-terminal@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/youch-terminal/-/youch-terminal-1.0.0.tgz#03e2096ee360ef915816e62ea9ec94a6ff094d9e"
+  integrity sha512-rOVcJi5juKSUI3/mwAKOP+gjrUWUgb5AUTe2LZlfLBgLdfgnYtBKCrWc02GgRozDf/i6uXBu9/y3Vf6db+7k1A==
+  dependencies:
+    chalk "^2.3.0"
+
+youch@~2.0.10:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/youch/-/youch-2.0.10.tgz#e0f6312b12304fd330a0c4a0e0925b0123f7d495"
   integrity sha512-qPLQW2TuwlcK9sm5i1Gbb9ezRZRZyzr6NsY5cqxsbh+2iEyKPxLlz0OSAc+pQ7mv1pYZLri1MXynggP6R2FcNQ==

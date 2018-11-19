@@ -3,12 +3,11 @@ const { resolve } = require('path')
 const { serial, parallel } = require('items-promise')
 const { normalizePath } = require('./utils')
 const { camelCase } = require('lodash')
-
+const DevErrors = require('hapi-dev-errors')
 const RouteTablePlugin = require('@bakjs/route-table')
 const ShortcutsPlugin = require('@bakjs/shortcuts')
 const InputPlugin = require('@bakjs/input')
 const LoggingPlugin = require('@bakjs/logging')
-const DevErrors = require('@bakjs/dev-errors')
 
 module.exports = class Server {
   /**
