@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.2.1...@bakjs/mongo@4.2.2) (2018-11-19)
+
+
+### Bug Fixes
+
+* **mongo:** enable useCreateIndex by default ([22ee6b0](https://github.com/bakjs/bak/commit/22ee6b0))
+
+
+
+
+
 ## [4.2.1](https://github.com/bakjs/bak/compare/@bakjs/mongo@0.2.0...@bakjs/mongo@4.2.1) (2018-11-19)
 
 **Note:** Version bump only for package @bakjs/mongo
