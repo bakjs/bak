@@ -43,7 +43,8 @@ Options.defaults = {
   nodemon: {},
   devErrors: {
     showErrors: undefined,
-    useYouch: true
+    useYouch: true,
+    toTerminal: false
   },
   server: {
     cache: null,

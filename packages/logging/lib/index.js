@@ -1,25 +1,20 @@
-const { parseRequest, commonFormat } = require('./utils')
 const consola = require('consola')
 
 exports.register = function (server, options) {
-  const isDev = process.env.NODE_ENV !== 'production'
-
   server.events.on(
-    { name: 'request', channels: ['error', 'internal'] }, (request, { error, timestamp }, tags) => {
+    { name: 'request', channels: ['error', 'internal'] }, (_, { error, timestamp }, tags) => {
       if (!error) {
         return
       }
-
-      // Parse request
-      const reqInfo = parseRequest(request, timestamp)
-
-      if (isDev) {
-        consola.error(error)
-        consola.info(reqInfo)
-      } else {
-        // Log with common log format
-        consola.log(commonFormat(reqInfo))
+      if (error.output && error.output.statusCode === 404) {
+        return
       }
+
+      consola.error({
+        message: error,
+        tag: Object.keys(tags),
+        time: timestamp
+      })
     }
   )
 }
