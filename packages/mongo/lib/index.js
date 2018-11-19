@@ -27,7 +27,8 @@ exports.register = function (server, config = {}) {
 
     const clientOptions = {
       promiseLibrary: global.Promise,
-      useNewUrlParser: true
+      useNewUrlParser: true,
+      useCreateIndex: true
     }
 
     if (connection_name === 'default') {
