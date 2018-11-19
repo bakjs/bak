@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.1](https://github.com/bakjs/bak/compare/@bakjs/logging@2.7.0...@bakjs/logging@2.7.1) (2018-11-19)
+
+
+### Bug Fixes
+
+* hade errors with unauthenticated tag ([b56130c](https://github.com/bakjs/bak/commit/b56130c))
+
+
+
+
+
 # [2.7.0](https://github.com/bakjs/bak/compare/@bakjs/logging@0.3.1...@bakjs/logging@2.7.0) (2018-11-19)
 
 

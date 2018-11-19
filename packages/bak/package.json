@@ -1,6 +1,6 @@
 {
   "name": "bak",
-  "version": "4.6.0",
+  "version": "4.6.1",
   "description": "Delightful modern web applications framework for hapi.js",
   "repository": "https://github.com/bakjs/bak",
   "main": "lib/index.js",
@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "@bakjs/input": "^2.2.1",
-    "@bakjs/logging": "^2.7.0",
+    "@bakjs/logging": "^2.7.1",
     "@bakjs/route-table": "^2.4.0",
     "@bakjs/shortcuts": "^2.2.1",
     "boom": "^7.2.2",
