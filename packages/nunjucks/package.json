@@ -1,6 +1,7 @@
 {
   "name": "@bakjs/nunjucks",
   "version": "2.1.1",
+  "repository": "bakjs/bak",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {

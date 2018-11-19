@@ -1,6 +1,7 @@
 {
   "name": "@bakjs/audit",
   "version": "3.0.0",
+  "repository": "bakjs/bak",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
