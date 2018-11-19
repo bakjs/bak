@@ -1,7 +1,7 @@
-const Joi = require('joi')
-const { Controller } = require('../../../..')
+import Joi from 'joi'
+import { Controller } from 'bak'
 
-class APIController extends Controller {
+export default class APIController extends Controller {
   init () {
     this.defaults = {
       validate: {
@@ -18,5 +18,3 @@ class APIController extends Controller {
     return 'Hello ' + request.params.name
   }
 }
-
-module.exports = APIController

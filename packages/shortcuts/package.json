@@ -1,0 +1,15 @@
+{
+  "name": "@bakjs/shortcuts",
+  "version": "2.2.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Pooya Parsa <pooya@pi0.ir>"
+  ],
+  "files": [
+    "lib"
+  ]
+}

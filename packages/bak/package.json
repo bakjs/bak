@@ -1,0 +1,29 @@
+{
+  "name": "bak",
+  "version": "4.5.0",
+  "description": "Delightful modern web applications framework for hapi.js",
+  "repository": "https://github.com/bakjs/bak",
+  "main": "lib/index.js",
+  "bin": "bin/bak",
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "dependencies": {
+    "@bakjs/dev-errors": "^2.1.0-1",
+    "@bakjs/input": "^2.2.0",
+    "@bakjs/logging": "^2.6.0",
+    "@bakjs/route-table": "^2.3.0",
+    "@bakjs/shortcuts": "^2.2.0",
+    "boom": "^7.2.2",
+    "chalk": "^2.4.1",
+    "consola": "^2.2.2",
+    "esm": "^3.0.84",
+    "hapi": "^17.6.4",
+    "items-promise": "^1.0.0",
+    "lodash": "^4.17.11",
+    "nodemon": "^1.18.5",
+    "std-env": "^2.1.1",
+    "sywac": "^1.2.1"
+  }
+}

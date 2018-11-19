@@ -1,5 +1,5 @@
 import Joi from 'joi'
-import { Controller } from '../../..'
+import { Controller } from 'bak'
 
 export default class APIController extends Controller {
   init () {

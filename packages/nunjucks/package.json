@@ -1,0 +1,21 @@
+{
+  "name": "@bakjs/nunjucks",
+  "version": "2.1.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Pooya Parsa <pooya@pi0.ir>"
+  ],
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "inert": "^5.1.1",
+    "nunjucks": "^3.1.3",
+    "path": "^0.12.7",
+    "vision": "^5.4.2"
+  }
+}
