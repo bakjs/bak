@@ -20,9 +20,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
-    "boom": "^7.2.2",
-    "hoek": "^6.0.3",
-    "joi": "^14.0.6",
+    "boom": "^7.3.0",
+    "hoek": "^6.1.2",
+    "joi": "^14.3.0",
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11"
   }
