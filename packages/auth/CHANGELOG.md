@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.2](https://github.com/bakjs/bak/compare/@bakjs/auth@3.8.1...@bakjs/auth@3.8.2) (2018-12-03)
+
+**Note:** Version bump only for package @bakjs/auth
+
+
+
+
+
 ## [3.8.1](https://github.com/bakjs/bak/compare/@bakjs/auth@0.1.7...@bakjs/auth@3.8.1) (2018-11-19)
 
 **Note:** Version bump only for package @bakjs/auth
