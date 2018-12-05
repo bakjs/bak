@@ -71,5 +71,8 @@ Options.defaults = {
         failAction: undefined
       }
     }
+  },
+  listener: {
+    keepAliveTimeout: undefined
   }
 }

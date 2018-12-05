@@ -27,6 +27,12 @@ module.exports = class Server {
     // Create server
     this.hapi = new Hapi.Server(this.options.server)
 
+    // Listener options
+    const { keepAliveTimeout } = this.options.listener
+    if (keepAliveTimeout !== undefined) {
+      this.hapi.listener.keepAliveTimeout = keepAliveTimeout
+    }
+
     // Register core plugins
     const corePlugins = [
       LoggingPlugin,
