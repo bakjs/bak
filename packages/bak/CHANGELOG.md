@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.7.0](https://github.com/bakjs/bak/compare/bak@4.6.2...bak@4.7.0) (2018-12-05)
+
+
+### Features
+
+* listerner.keepAliveTimeout (fixes [#28](https://github.com/bakjs/bak/issues/28)) ([70e2042](https://github.com/bakjs/bak/commit/70e2042))
+
+
+
+
+
 ## [4.6.2](https://github.com/bakjs/bak/compare/bak@4.6.1...bak@4.6.2) (2018-12-03)
 
 **Note:** Version bump only for package bak
