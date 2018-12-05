@@ -26,6 +26,9 @@ module.exports = class Server {
   async init () {
     // Create server
     this.hapi = new Hapi.Server(this.options.server)
+    if (this.options.keepAliveTimeout) {
+      this.hapi.listener.keepAliveTimeout = this.options.keepAliveTimeout
+    }
 
     // Register core plugins
     const corePlugins = [
