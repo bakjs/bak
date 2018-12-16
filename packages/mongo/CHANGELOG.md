@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.2.3...@bakjs/mongo@4.3.0) (2018-12-16)
+
+
+### Bug Fixes
+
+* **mongo:** support connection.options ([e053f5b](https://github.com/bakjs/bak/commit/e053f5b))
+
+
+### Features
+
+* **mongo:** pass supported configs for Mongoose.prototype.set() ([1d63341](https://github.com/bakjs/bak/commit/1d63341)), closes [#29](https://github.com/bakjs/bak/issues/29)
+
+
+
+
+
 ## [4.2.3](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.2.2...@bakjs/mongo@4.2.3) (2018-12-03)
 
 **Note:** Version bump only for package @bakjs/mongo
