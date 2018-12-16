@@ -23,18 +23,21 @@ exports.register = function (server, config = {}) {
   }
 
   const queue = Object.keys(config.connections).map(connection_name => {
-    const connection = config.connections[connection_name]
+    let connection = config.connections[connection_name]
+    if (typeof connection === 'string') {
+      connection = { uri: connection }
+    }
 
-    const clientOptions = {
+    const options = Object.assign({
       promiseLibrary: global.Promise,
       useNewUrlParser: true,
       useCreateIndex: true
-    }
+    }, connection.options)
 
     if (connection_name === 'default') {
-      return _Mongoose.connect(connection.uri, clientOptions)
+      return _Mongoose.connect(connection.uri, options)
     }
-    return _Mongoose.createConnection(connection.uri, clientOptions)
+    return _Mongoose.createConnection(connection.uri, options)
   })
 
   return Promise.all(queue)
