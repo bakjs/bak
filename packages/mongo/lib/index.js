@@ -9,6 +9,7 @@ exports.register = function (server, config = {}) {
 
   // Use custom function to log collection methods + arguments
   _Mongoose.set('debug', config.debug)
+  _Mongoose.set('useFindAndModify', config.useFindAndModify);
 
   // Register cachegoose
   // @see https://github.com/boblauer/cachegoose
