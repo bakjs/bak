@@ -7,8 +7,27 @@ exports.register = function (server, config = {}) {
   // Use native promises
   _Mongoose.Promise = global.Promise
 
-  // Use custom function to log collection methods + arguments
-  _Mongoose.set('debug', config.debug)
+  // https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
+  const supportedSetKeys = [
+    'debug',
+    'bufferCommands',
+    'useCreateIndex',
+    'useFindAndModify',
+    'useNewUrlParser',
+    'cloneSchemas',
+    'applyPluginsToDiscriminators',
+    'objectIdGetter',
+    'runValidators',
+    'toObject',
+    'toJSON',
+    'strict',
+    'selectPopulatedPaths'
+  ]
+  for (const key of supportedSetKeys) {
+    if (config[key] !== undefined) {
+      _Mongoose.set(key, config[key])
+    }
+  }
 
   // Register cachegoose
   // @see https://github.com/boblauer/cachegoose
@@ -28,6 +47,7 @@ exports.register = function (server, config = {}) {
       connection = { uri: connection }
     }
 
+    // https://mongoosejs.com/docs/connections.html#options
     const options = Object.assign({
       promiseLibrary: global.Promise,
       useNewUrlParser: true,
