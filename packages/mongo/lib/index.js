@@ -53,11 +53,39 @@ exports.register = function (server, config = {}) {
       useNewUrlParser: true,
       useCreateIndex: true
     }, connection.options)
-
-    if (connection_name === 'default') {
-      return _Mongoose.connect(connection.uri, options)
+    
+    function connect() {
+      if (connection_name === 'default') {
+        return _Mongoose.connect(connection.uri, options)
+      }
+      return _Mongoose.createConnection(connection.uri, options)
     }
-    return _Mongoose.createConnection(connection.uri, options)
+
+    const db = _Mongoose.connection;
+
+    db.on('connecting', () => {
+      console.log('connecting to MongoDB...');
+    });
+
+    db.on('error', (error) => {
+      console.error('Error in MongoDb connection: ' + error);
+      _Mongoose.disconnect();
+    });
+    db.on('connected', () => {
+      console.log('MongoDB connected!');
+    });
+    db.once('open', () => {
+      console.log('MongoDB connection opened!');
+    });
+    db.on('reconnected', () => {
+      console.log('MongoDB reconnected!');
+    });
+    db.on('disconnected', () => {
+      console.log('MongoDB disconnected!');
+      setTimeout(() => connect(), 1000)
+    });
+
+    return connect()
   })
 
   return Promise.all(queue)
