@@ -1,4 +1,5 @@
 const Mongoose = require('mongoose')
+const consola = require('consola')
 const Model = require('./model')
 
 exports.register = function (server, config = {}) {
@@ -64,24 +65,24 @@ exports.register = function (server, config = {}) {
     const db = _Mongoose.connection;
 
     db.on('connecting', () => {
-      console.log('connecting to MongoDB...');
+      consola.debug('connecting to MongoDB...');
     });
 
     db.on('error', (error) => {
-      console.error('Error in MongoDb connection: ' + error);
+      consola.error('Error in MongoDb connection: ' + error);
       _Mongoose.disconnect();
     });
     db.on('connected', () => {
-      console.log('MongoDB connected!');
+      consola.debug('MongoDB connected!');
     });
     db.once('open', () => {
-      console.log('MongoDB connection opened!');
+      consola.debug('MongoDB connection opened!');
     });
     db.on('reconnected', () => {
-      console.log('MongoDB reconnected!');
+      consola.debug('MongoDB reconnected!');
     });
     db.on('disconnected', () => {
-      console.log('MongoDB disconnected!');
+      consola.debug('MongoDB disconnected!');
       setTimeout(() => connect(), 1000)
     });
 
