@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.3.0...@bakjs/mongo@4.4.0) (2019-01-01)
+
+
+### Bug Fixes
+
+* **mongo:** add missing consola dependency ([546b7ec](https://github.com/bakjs/bak/commit/546b7ec))
+
+
+### Features
+
+* **mongo:**  logger and forceReconnect ([3407718](https://github.com/bakjs/bak/commit/3407718))
+* **mongo:** fixes and improvements ([97a8dd7](https://github.com/bakjs/bak/commit/97a8dd7))
+
+
+
+
+
 # [4.3.0](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.2.3...@bakjs/mongo@4.3.0) (2018-12-16)
 
 
