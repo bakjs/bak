@@ -1,7 +1,7 @@
 const Mongoose = require('mongoose')
 const consola = require('consola')
 const Model = require('./model')
-const { setupLogger, setupAutoReconnect } = require('./utils')
+const { setupLogger, setupForceReconnect } = require('./utils')
 
 // Create a tagged logger
 const mongoLogger = consola.withTag('MongoDB')

@@ -1,40 +1,40 @@
 // Utiliy function to setup logger on db
-function setupLogger(db, logger) {
+function setupLogger (db, logger) {
   // Emitted after getting disconnected from the db.
   // Ready Status: 0
   db.on('disconnected', () => {
-    logger.debug('Disconnected!');
-  });
+    logger.debug('Disconnected!')
+  })
 
   // Emitted when this connection successfully connects to the db.
   // May be emitted multiple times in reconnected scenarios.
   // Ready Status: 1
   db.on('connected', () => {
-    logger.debug('Connected!');
-  });
+    logger.debug('Connected!')
+  })
 
   // Emitted when connection.{open,openSet}() is executed on this connection.
   // Ready Status: 2
   db.on('connecting', () => {
-    logger.debug('Connecting to MongoDB...');
-  });
+    logger.debug('Connecting to MongoDB...')
+  })
 
   // Emitted when an error occurs on this connection.
   db.on('error', (error) => {
-    logger.error(error);
-  });
+    logger.error(error)
+  })
 
   // Emitted after we connected and onOpen is executed
   // on all of this connections models.
   db.once('open', () => {
-    logger.debug('Connection opened!');
-  });
+    logger.debug('Connection opened!')
+  })
 
   // Emitted after we connected and subsequently disconnected,
   // followed by successfully another successfull connection.
   db.on('reconnected', () => {
-    logger.debug('Reconnected!');
-  });
+    logger.debug('Reconnected!')
+  })
 
   // Emitted when connection.close() was executed.
   db.on('disconnecting', () => {
@@ -49,13 +49,13 @@ function setupLogger(db, logger) {
 }
 
 // Utility function to reconnect db on disconnect
-function setupForceReconnect(db, uri, options, timeout) {
+function setupForceReconnect (db, uri, options, timeout) {
   db.on('error', () => {
-    db.disconnect();
+    db.disconnect()
   })
   db.on('disconnected', () => {
     setTimeout(() => db.connect(uri, options), timeout)
-  });
+  })
 }
 
 module.exports = {
