@@ -1,5 +1,10 @@
 const Mongoose = require('mongoose')
+const consola = require('consola')
 const Model = require('./model')
+const { setupLogger, setupAutoReconnect } = require('./utils')
+
+// Create a tagged logger
+const mongoLogger = consola.withTag('MongoDB')
 
 exports.register = function (server, config = {}) {
   const _Mongoose = config.Mongoose || Mongoose
@@ -41,26 +46,44 @@ exports.register = function (server, config = {}) {
     require('mongoose-fill')
   }
 
-  const queue = Object.keys(config.connections).map(connection_name => {
-    let connection = config.connections[connection_name]
-    if (typeof connection === 'string') {
-      connection = { uri: connection }
+  return Promise.all(Object.keys(config.connections).map(async connectionName => {
+    // Normalize connection options
+    let connectionOpts = config.connections[connectionName]
+    if (typeof connectionOpts === 'string') {
+      connectionOpts = { uri: connectionOpts }
     }
 
+    // Merge options
     // https://mongoosejs.com/docs/connections.html#options
     const options = Object.assign({
       promiseLibrary: global.Promise,
       useNewUrlParser: true,
       useCreateIndex: true
-    }, connection.options)
+    }, connectionOpts.options)
 
-    if (connection_name === 'default') {
-      return _Mongoose.connect(connection.uri, options)
+    // Create a scopped logger
+    if (connectionOpts.logger === undefined) {
+      connectionOpts.logger = mongoLogger.withTag(name)
     }
-    return _Mongoose.createConnection(connection.uri, options)
-  })
 
-  return Promise.all(queue)
+    // Connect to db
+    let db
+    if (connection_name === 'default') {
+      db = await _Mongoose.connect(connectionOpts.uri, options)
+    } else {
+      db = await _Mongoose.createConnection(connectionOpts.uri, options)
+    }
+
+    // Setup logger
+    if (connectionOpts.logger !== false) {
+      setupLogger(db, connectionOpts.logger)
+    }
+
+    // Setup auto-reconnect
+    if (connectionOpts.forceReconnect === true) {
+      setupForceReconnect(db)
+    }
+  }))
 }
 
 exports.pkg = require('../package.json')
