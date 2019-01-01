@@ -47,41 +47,44 @@ exports.register = function (server, config = {}) {
   }
 
   return Promise.all(Object.keys(config.connections).map(async connectionName => {
-    // Normalize connection options
+    // Normalize and destructure connection options
     let connectionOpts = config.connections[connectionName]
     if (typeof connectionOpts === 'string') {
       connectionOpts = { uri: connectionOpts }
     }
+    let { uri, options, logger, forceReconnect } = connectionOpts
 
-    // Merge options
+    // Apply default options
     // https://mongoosejs.com/docs/connections.html#options
-    const options = Object.assign({
+    options = {
       promiseLibrary: global.Promise,
       useNewUrlParser: true,
-      useCreateIndex: true
-    }, connectionOpts.options)
+      useCreateIndex: true,
+      ...options
+    }
 
     // Create a scopped logger
-    if (connectionOpts.logger === undefined) {
-      connectionOpts.logger = mongoLogger.withTag(name)
+    if (logger === undefined) {
+      logger = mongoLogger.withTag(connectionName)
     }
 
     // Connect to db
     let db
-    if (connection_name === 'default') {
-      db = await _Mongoose.connect(connectionOpts.uri, options)
+    if (connectionName === 'default') {
+      db = await _Mongoose.connect(uri, options)
     } else {
-      db = await _Mongoose.createConnection(connectionOpts.uri, options)
+      db = await _Mongoose.createConnection(uri, options)
     }
 
     // Setup logger
-    if (connectionOpts.logger !== false) {
-      setupLogger(db, connectionOpts.logger)
+    if (logger !== false) {
+      setupLogger(db, logger)
     }
 
-    // Setup auto-reconnect
-    if (connectionOpts.forceReconnect === true) {
-      setupForceReconnect(db)
+    // Setup forceReconnect
+    if (forceReconnect) {
+      setupForceReconnect(db, uri, options,
+        forceReconnect === true ? 1000 : forceReconnect)
     }
   }))
 }

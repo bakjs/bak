@@ -49,12 +49,12 @@ function setupLogger(db, logger) {
 }
 
 // Utility function to reconnect db on disconnect
-function setupForceReconnect(db) {
+function setupForceReconnect(db, uri, options, timeout) {
   db.on('error', () => {
     db.disconnect();
   })
   db.on('disconnected', () => {
-    setTimeout(() => db.connect(), 1000)
+    setTimeout(() => db.connect(uri, options), timeout)
   });
 }
 
