@@ -1,10 +1,6 @@
 const Mongoose = require('mongoose')
-const consola = require('consola')
 const Model = require('./model')
-const { setupLogger, setupForceReconnect } = require('./utils')
-
-// Create a tagged logger
-const mongoLogger = consola.withTag('MongoDB')
+const { connect, consola } = require('./utils')
 
 exports.register = async function (server, config = {}) {
   const _Mongoose = config.Mongoose || Mongoose
@@ -46,48 +42,7 @@ exports.register = async function (server, config = {}) {
   const connectionNames = Object.keys(config.connections)
 
   for (const connectionName of connectionNames) {
-    // Normalize and destructure connection options
-    let connectionOpts = config.connections[connectionName]
-    if (typeof connectionOpts === 'string') {
-      connectionOpts = { uri: connectionOpts }
-    }
-    let { uri, options, logger, forceReconnect } = connectionOpts
-
-    // Apply default options
-    // https://mongoosejs.com/docs/connections.html#options
-    options = {
-      useNewUrlParser: true,
-      useCreateIndex: true,
-      ...options
-    }
-
-    // Create a scopped logger
-    if (logger === undefined) {
-      logger = mongoLogger.withTag(connectionName)
-    }
-
-    // Setup helper
-    const setupDB = (db) => {
-      // Setup logger
-      if (logger !== false) {
-        setupLogger(db, logger)
-      }
-
-      // Setup forceReconnect
-      if (forceReconnect) {
-        setupForceReconnect(db, uri, options,
-          forceReconnect === true ? 1000 : forceReconnect)
-      }
-    }
-
-    // Connect to db
-    if (connectionName === 'default') {
-      setupDB(_Mongoose.connection)
-      await _Mongoose.connect(uri, options)
-    } else {
-      const db = await _Mongoose.createConnection(uri, options)
-      setupDB(db)
-    }
+    await connect(_Mongoose, connectionName, config.connections[connectionName])
   }
 }
 

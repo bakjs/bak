@@ -1,64 +1,125 @@
+const consola = require('consola').withTag('MongoDB')
+
 // Utiliy function to setup logger on db
-function setupLogger (db, logger) {
+function logConnectionEvents (conn) {
   // Emitted after getting disconnected from the db.
-  // Ready Status: 0
-  db.on('disconnected', () => {
-    logger.debug('Disconnected!')
+  // _readyState: 0
+  conn.on('disconnected', () => {
+    conn.$logger.debug('Disconnected!')
   })
 
   // Emitted when this connection successfully connects to the db.
   // May be emitted multiple times in reconnected scenarios.
-  // Ready Status: 1
-  db.on('connected', () => {
-    logger.debug('Connected!')
+  // _readyState: 1
+  conn.on('connected', () => {
+    conn.$logger.success('Connected!')
   })
 
   // Emitted when connection.{open,openSet}() is executed on this connection.
-  // Ready Status: 2
-  db.on('connecting', () => {
-    logger.debug('Connecting to MongoDB...')
+  // _readyState: 2
+  conn.on('connecting', () => {
+    conn.$logger.info('Connecting...')
+  })
+
+  // Emitted when connection.close() was executed.
+  // _readyState: 3
+  conn.on('disconnecting', () => {
+    conn.$logger.debug('Disconnecting...')
   })
 
   // Emitted when an error occurs on this connection.
-  db.on('error', (error) => {
-    logger.error(error)
+  conn.on('error', (error) => {
+    conn.$logger.error(error)
   })
 
   // Emitted after we connected and onOpen is executed
   // on all of this connections models.
-  db.once('open', () => {
-    logger.debug('Connection opened!')
+  conn.on('open', () => {
+    conn.$logger.debug('Connection opened!')
   })
 
   // Emitted after we connected and subsequently disconnected,
   // followed by successfully another successfull connection.
-  db.on('reconnected', () => {
-    logger.debug('Reconnected!')
-  })
-
-  // Emitted when connection.close() was executed.
-  db.on('disconnecting', () => {
-    logger.debug('Disconnecting...')
+  conn.on('reconnected', () => {
+    conn.$logger.debug('Reconnected!')
   })
 
   // Emitted in a replica-set scenario, when all nodes specified
   // in the connection string are connected.
-  db.on('fullsetup', () => {
-    logger.debug('ReplicaSet ready!')
+  conn.on('fullsetup', () => {
+    conn.$logger.debug('ReplicaSet ready!')
   })
 }
 
-// Utility function to reconnect db on disconnect
-function setupForceReconnect (db, uri, options, timeout) {
-  db.on('error', () => {
-    db.disconnect()
-  })
-  db.on('disconnected', () => {
-    setTimeout(() => db.connect(uri, options), timeout)
-  })
+// Utility function to setup a connection
+async function connect (mongoose, connectionName, connectionOpts) {
+  const isDefault = connectionName === 'default'
+
+  // Normalize and destructure connection options
+  if (typeof connectionOpts === 'string') {
+    connectionOpts = { uri: connectionOpts }
+  }
+  let { uri, options, forceReconnect } = connectionOpts
+
+  // Apply default options
+  // https://mongoosejs.com/docs/connections.html#options
+  options = {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    ...options
+  }
+
+  // Manualy create connection
+  let conn
+  if (isDefault) {
+    conn = mongoose.connection
+  } else {
+    conn = new mongoose.Connection(mongoose)
+    mongoose.connections.push(conn)
+  }
+
+  // $logger helper
+  conn.$logger = isDefault
+    ? consola
+    : consola.withTag(connectionName)
+
+  // Log connection events
+  logConnectionEvents(conn)
+
+  // $connect helper
+  conn.$connect = () => {
+    return new Promise((resolve, reject) => {
+      conn.openUri(uri, options, (error, a) => {
+        if (error) {
+          reject(error)
+        } else {
+          resolve(conn)
+        }
+      })
+    })
+  }
+
+  // Make accessable via mongoose.$connectionName
+  mongoose['$' + connectionName] = conn
+
+  // Connect
+  if (forceReconnect) {
+    conn.$connect()
+
+    const timeout = forceReconnect === true ? 1000 : forceReconnect
+    conn.on('error', () => {
+      conn.close()
+    })
+    conn.on('disconnected', () => {
+      setTimeout(() => { conn.$connect() }, timeout)
+    })
+  } else {
+    await conn.$connect()
+    await conn.$initialConnection
+  }
 }
 
 module.exports = {
-  setupLogger,
-  setupForceReconnect
+  connect,
+  consola
 }
