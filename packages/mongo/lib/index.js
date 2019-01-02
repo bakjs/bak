@@ -39,11 +39,14 @@ exports.register = async function (server, config = {}) {
     require('mongoose-fill')
   }
 
+  // Connect to all connections
   const connectionNames = Object.keys(config.connections)
-
   for (const connectionName of connectionNames) {
     await connect(_Mongoose, connectionName, config.connections[connectionName])
   }
+
+  // Add h.mongoose
+  server.decorate('toolkit', 'mongoose', _Mongoose)
 }
 
 exports.pkg = require('../package.json')
