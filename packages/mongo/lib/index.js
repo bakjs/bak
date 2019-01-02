@@ -9,9 +9,6 @@ const mongoLogger = consola.withTag('MongoDB')
 exports.register = async function (server, config = {}) {
   const _Mongoose = config.Mongoose || Mongoose
 
-  // Use native promises
-  _Mongoose.Promise = global.Promise
-
   // https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
   const supportedSetKeys = [
     'debug',
@@ -59,7 +56,6 @@ exports.register = async function (server, config = {}) {
     // Apply default options
     // https://mongoosejs.com/docs/connections.html#options
     options = {
-      promiseLibrary: global.Promise,
       useNewUrlParser: true,
       useCreateIndex: true,
       ...options
