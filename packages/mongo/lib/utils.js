@@ -89,7 +89,7 @@ async function connect (mongoose, connectionName, connectionOpts) {
   // $connect helper
   conn.$connect = () => {
     return new Promise((resolve, reject) => {
-      conn.openUri(uri, options, (error, a) => {
+      conn.openUri(uri, options, (error) => {
         if (error) {
           reject(error)
         } else {
