@@ -102,10 +102,8 @@ async function connect (mongoose, connectionName, connectionOpts) {
   // Make accessable via mongoose.$connectionName
   mongoose['$' + connectionName] = conn
 
-  // Connect
+  // Setup force reconnect
   if (forceReconnect) {
-    conn.$connect()
-
     const timeout = forceReconnect === true ? 1000 : forceReconnect
     conn.on('error', () => {
       conn.close()
@@ -113,10 +111,11 @@ async function connect (mongoose, connectionName, connectionOpts) {
     conn.on('disconnected', () => {
       setTimeout(() => { conn.$connect() }, timeout)
     })
-  } else {
-    await conn.$connect()
-    await conn.$initialConnection
   }
+
+  // Connect
+  await conn.$connect()
+  await conn.$initialConnection
 }
 
 module.exports = {
