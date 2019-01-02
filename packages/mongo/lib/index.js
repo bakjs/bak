@@ -68,23 +68,27 @@ exports.register = function (server, config = {}) {
       logger = mongoLogger.withTag(connectionName)
     }
 
+    // Setup helper
+    const setupDB = (db) => {
+      // Setup logger
+      if (logger !== false) {
+        setupLogger(db, logger)
+      }
+
+      // Setup forceReconnect
+      if (forceReconnect) {
+        setupForceReconnect(db, uri, options,
+          forceReconnect === true ? 1000 : forceReconnect)
+      }
+    }
+
     // Connect to db
-    let db
     if (connectionName === 'default') {
-      db = await _Mongoose.connect(uri, options)
+      setupDB(_Mongoose.connection)
+      await _Mongoose.connect(uri, options)
     } else {
-      db = await _Mongoose.createConnection(uri, options)
-    }
-
-    // Setup logger
-    if (logger !== false) {
-      setupLogger(db, logger)
-    }
-
-    // Setup forceReconnect
-    if (forceReconnect) {
-      setupForceReconnect(db, uri, options,
-        forceReconnect === true ? 1000 : forceReconnect)
+      const db = await _Mongoose.createConnection(uri, options)
+      setupDB(db)
     }
   }))
 }
