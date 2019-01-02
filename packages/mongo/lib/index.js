@@ -6,7 +6,7 @@ const { setupLogger, setupForceReconnect } = require('./utils')
 // Create a tagged logger
 const mongoLogger = consola.withTag('MongoDB')
 
-exports.register = function (server, config = {}) {
+exports.register = async function (server, config = {}) {
   const _Mongoose = config.Mongoose || Mongoose
 
   // Use native promises
@@ -46,7 +46,9 @@ exports.register = function (server, config = {}) {
     require('mongoose-fill')
   }
 
-  return Promise.all(Object.keys(config.connections).map(async connectionName => {
+  const connectionNames = Object.keys(config.connections)
+
+  for (const connectionName of connectionNames) {
     // Normalize and destructure connection options
     let connectionOpts = config.connections[connectionName]
     if (typeof connectionOpts === 'string') {
@@ -90,7 +92,7 @@ exports.register = function (server, config = {}) {
       const db = await _Mongoose.createConnection(uri, options)
       setupDB(db)
     }
-  }))
+  }
 }
 
 exports.pkg = require('../package.json')
