@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.4.0...@bakjs/mongo@4.5.0) (2019-01-02)
+
+
+### Bug Fixes
+
+* **mongo:** fix default connection setup ([95e72f6](https://github.com/bakjs/bak/commit/95e72f6))
+
+
+### Features
+
+* **mongo:** add h.mongoose ([798f58a](https://github.com/bakjs/bak/commit/798f58a))
+* **mongo:** rework connection handling ([903e43e](https://github.com/bakjs/bak/commit/903e43e))
+
+
+
+
+
 # [4.4.0](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.3.0...@bakjs/mongo@4.4.0) (2019-01-01)
 
 
