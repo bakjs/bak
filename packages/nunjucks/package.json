@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "inert": "^5.1.2",
-    "nunjucks": "^3.1.6",
+    "nunjucks": "^3.1.7",
     "path": "^0.12.7",
     "vision": "^5.4.4"
   }
