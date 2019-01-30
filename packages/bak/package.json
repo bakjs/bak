@@ -18,7 +18,7 @@
     "chalk": "^2.4.2",
     "consola": "^2.3.2",
     "esm": "^3.2.0",
-    "hapi": "^17.8.1",
+    "hapi": "^18.0.0",
     "hapi-dev-errors": "^3.2.2",
     "items-promise": "^1.0.0",
     "lodash": "^4.17.11",
