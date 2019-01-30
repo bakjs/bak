@@ -15,7 +15,7 @@
     "index.js"
   ],
   "dependencies": {
-    "cachegoose": "^7.1.0",
+    "cachegoose": "^8.0.0",
     "consola": "^2.3.2",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.7",
