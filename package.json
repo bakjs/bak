@@ -26,6 +26,6 @@
     "jest": "^24.0.0",
     "jsdom": "^13.2.0",
     "lerna": "^3.10.7",
-    "standard-version": "^4.4.0"
+    "standard-version": "^5.0.1"
   }
 }
