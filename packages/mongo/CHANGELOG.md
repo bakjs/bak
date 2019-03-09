@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.5.1](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.5.0...@bakjs/mongo@4.5.1) (2019-03-09)
+
+**Note:** Version bump only for package @bakjs/mongo
+
+
+
+
+
 # [4.5.0](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.4.0...@bakjs/mongo@4.5.0) (2019-01-02)
 
 
