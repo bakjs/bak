@@ -1,5 +1,5 @@
 const path = require('path')
-const esm = require('esm')(module, {})
+const esm = require('esm')(module)
 
 const requireESM = path => {
   const m = esm(path)
