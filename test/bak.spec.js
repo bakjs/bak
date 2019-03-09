@@ -1,6 +1,6 @@
 const setup = require('./_setup')
 
-describe('bak', async function () {
+describe('bak', () => {
   setup.call(this, 'basic')
 
   this.init()
