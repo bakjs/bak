@@ -1,6 +1,6 @@
 const Mongoose = require('mongoose')
 const Model = require('./model')
-const { connect, consola } = require('./utils')
+const { connect } = require('./utils')
 
 exports.register = async function (server, config = {}) {
   const _Mongoose = config.Mongoose || Mongoose
