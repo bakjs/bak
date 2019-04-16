@@ -17,7 +17,7 @@
     "boom": "^7.3.0",
     "chalk": "^2.4.2",
     "consola": "^2.6.0",
-    "esm": "^3.2.22",
+    "esm": "3.2.20",
     "hapi": "^18.1.0",
     "hapi-dev-errors": "^3.2.3",
     "items-promise": "^1.0.0",
