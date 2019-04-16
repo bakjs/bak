@@ -6,7 +6,8 @@ exports.register = function (server, options) {
       if (
         (!error) ||
         (tags.unauthenticated) ||
-        (error.output && error.output.statusCode === 404)
+        (error.output && error.output.statusCode === 404) ||
+        (typeof options.filter === 'function' && !options.filter(error, tags))
       ) {
         return
       }
