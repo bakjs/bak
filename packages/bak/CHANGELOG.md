@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.6](https://github.com/bakjs/bak/compare/bak@4.7.5...bak@4.7.6) (2019-04-16)
+
+
+### Bug Fixes
+
+* dedefault config file ([cc605f2](https://github.com/bakjs/bak/commit/cc605f2))
+
+
+
+
+
 ## [4.7.5](https://github.com/bakjs/bak/compare/bak@4.7.4...bak@4.7.5) (2019-04-16)
 
 
