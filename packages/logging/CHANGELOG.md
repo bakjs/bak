@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/bakjs/bak/compare/@bakjs/logging@2.7.2...@bakjs/logging@2.8.0) (2019-04-16)
+
+
+### Features
+
+* **logging:** allow `options.filter` ([ce6f867](https://github.com/bakjs/bak/commit/ce6f867))
+
+
+
+
+
 ## [2.7.2](https://github.com/bakjs/bak/compare/@bakjs/logging@2.7.1...@bakjs/logging@2.7.2) (2019-03-09)
 
 **Note:** Version bump only for package @bakjs/logging

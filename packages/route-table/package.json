@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/route-table",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "repository": "bakjs/bak",
   "license": "MIT",
   "main": "lib/index.js",
