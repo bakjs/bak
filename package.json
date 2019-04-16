@@ -24,7 +24,6 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^24.7.1",
-    "jsdom": "^13.2.0",
     "lerna": "^3.13.2",
     "standard-version": "^5.0.2"
   }
