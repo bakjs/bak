@@ -1,11 +1,16 @@
 const path = require('path')
 const esm = require('esm')
 
-const requireESM = esm(module, {
+const _requireESM = esm(module, {
   cjs: {
     dedefault: true
   }
 })
+
+const requireESM = (path) => {
+  const m = _requireESM(path)
+  return m.default || m
+}
 
 module.exports.parseArgs = (argv) => {
   const rootDir = path.resolve(process.cwd(), argv.dir || '')
