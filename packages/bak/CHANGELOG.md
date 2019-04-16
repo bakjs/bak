@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.5](https://github.com/bakjs/bak/compare/bak@4.7.4...bak@4.7.5) (2019-04-16)
+
+
+### Bug Fixes
+
+* pin esm to 3.2.20 ([aa407b9](https://github.com/bakjs/bak/commit/aa407b9))
+
+
+
+
+
 ## [4.7.4](https://github.com/bakjs/bak/compare/bak@4.7.3...bak@4.7.4) (2019-04-16)
 
 

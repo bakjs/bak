@@ -1,6 +1,6 @@
 {
   "name": "@bakjs/mongo",
-  "version": "4.5.2",
+  "version": "4.5.3",
   "repository": "bakjs/bak",
   "license": "MIT",
   "main": "lib/index.js",
