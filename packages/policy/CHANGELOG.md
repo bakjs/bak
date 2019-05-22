@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### BREAKING CHANGES
 
-* projects should also update using `@hapi/ ` for: hapi, book, hoek, joi, boom, vision, inert,
+* projects should also update using `@hapi/ ` for: hapi, hoek, joi, boom, vision, inert
 
 
 
