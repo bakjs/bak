@@ -1,6 +1,6 @@
-const Boom = require('boom')
-const Hoek = require('hoek')
-const Joi = require('joi')
+const Boom = require('@hapi/boom')
+const Hoek = require('@hapi/hoek')
+const Joi = require('@hapi/joi')
 
 const tokenScheme = function (server, { authOptions, authProvider }) {
   Hoek.assert(authOptions, 'Missing authOptions')

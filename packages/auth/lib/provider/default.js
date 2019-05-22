@@ -1,4 +1,4 @@
-const Boom = require('boom')
+const Boom = require('@hapi/boom')
 const Axios = require('axios')
 const _ = require('lodash')
 const AuthBaseProvider = require('./base')

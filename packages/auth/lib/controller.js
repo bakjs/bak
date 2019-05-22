@@ -1,5 +1,5 @@
 const { Controller } = require('bak')
-const Joi = require('joi')
+const Joi = require('@hapi/joi')
 
 class $AuthController extends Controller {
   constructor (authProvider, authOptions) {

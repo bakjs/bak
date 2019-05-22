@@ -1,4 +1,4 @@
-const Boom = require('boom')
+const Boom = require('@hapi/boom')
 
 class AuthBaseProvider {
   constructor (options = {}) {

@@ -1,5 +1,5 @@
-const Boom = require('boom')
-const Hoek = require('hoek')
+const Boom = require('@hapi/boom')
+const Hoek = require('@hapi/hoek')
 
 exports.register = function HapiRateLimit (plugin, _options) {
   // Apply default options

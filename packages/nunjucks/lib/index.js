@@ -1,6 +1,6 @@
-const Vision = require('vision')
+const Vision = require('@hapi/vision')
 const path = require('path')
-const Inert = require('inert')
+const Inert = require('@hapi/inert')
 const NunjuksEngine = require('./nunjucks-engine')
 
 exports.register = (server, options) => {

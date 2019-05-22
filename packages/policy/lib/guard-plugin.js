@@ -1,4 +1,4 @@
-const Boom = require('boom')
+const Boom = require('@hapi/boom')
 
 exports.register = function (server, options) {
   if (!options) options = {}

@@ -14,6 +14,6 @@
     "lib"
   ],
   "dependencies": {
-    "boom": "^7.3.0"
+    "@hapi/boom": "^7.3.0"
   }
 }
