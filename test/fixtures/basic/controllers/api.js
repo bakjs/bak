@@ -1,4 +1,4 @@
-import Joi from 'joi'
+import Joi from '@hapi/joi'
 import { Controller } from 'bak'
 
 export default class APIController extends Controller {
