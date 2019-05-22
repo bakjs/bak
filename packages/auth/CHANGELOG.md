@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/bakjs/bak/compare/@bakjs/auth@3.8.5...@bakjs/auth@4.0.0) (2019-05-22)
+
+
+### Features
+
+* migrate to `@hapi/` ([adf4db1](https://github.com/bakjs/bak/commit/adf4db1))
+
+
+### BREAKING CHANGES
+
+* projects should also update using `@hapi/ ` for: hapi, book, hoek, joi, boom, vision, inert,
+
+
+
+
+
 ## [3.8.5](https://github.com/bakjs/bak/compare/@bakjs/auth@3.8.4...@bakjs/auth@3.8.5) (2019-04-16)
 
 **Note:** Version bump only for package @bakjs/auth

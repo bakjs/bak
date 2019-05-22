@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/bakjs/bak/compare/bak@4.7.6...bak@5.0.0) (2019-05-22)
+
+
+### Bug Fixes
+
+* use exact [@bakjs](https://github.com/bakjs) dependencies ([a21ee23](https://github.com/bakjs/bak/commit/a21ee23))
+
+
+### Features
+
+* migrate to `@hapi/` ([adf4db1](https://github.com/bakjs/bak/commit/adf4db1))
+
+
+### BREAKING CHANGES
+
+* projects should also update using `@hapi/ ` for: hapi, book, hoek, joi, boom, vision, inert,
+
+
+
+
+
 ## [4.7.6](https://github.com/bakjs/bak/compare/bak@4.7.5...bak@4.7.6) (2019-04-16)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/bakjs/bak/compare/@bakjs/ratelimit@2.1.1...@bakjs/ratelimit@3.0.0) (2019-05-22)
+
+
+### Features
+
+* migrate to `@hapi/` ([adf4db1](https://github.com/bakjs/bak/commit/adf4db1))
+
+
+### BREAKING CHANGES
+
+* projects should also update using `@hapi/ ` for: hapi, book, hoek, joi, boom, vision, inert,
+
+
+
+
+
 ## [2.1.1](https://github.com/bakjs/bak/compare/@bakjs/ratelimit@0.1.4...@bakjs/ratelimit@2.1.1) (2018-11-19)
 
 **Note:** Version bump only for package @bakjs/ratelimit

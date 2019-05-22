@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/bakjs/bak/compare/@bakjs/nunjucks@2.1.5...@bakjs/nunjucks@3.0.0) (2019-05-22)
+
+
+### Features
+
+* migrate to `@hapi/` ([adf4db1](https://github.com/bakjs/bak/commit/adf4db1))
+
+
+### BREAKING CHANGES
+
+* projects should also update using `@hapi/ ` for: hapi, book, hoek, joi, boom, vision, inert,
+
+
+
+
+
 ## [2.1.5](https://github.com/bakjs/bak/compare/@bakjs/nunjucks@2.1.4...@bakjs/nunjucks@2.1.5) (2019-04-16)
 
 **Note:** Version bump only for package @bakjs/nunjucks
