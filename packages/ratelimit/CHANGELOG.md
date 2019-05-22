@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/bakjs/bak/compare/@bakjs/ratelimit@3.0.0...@bakjs/ratelimit@3.0.1) (2019-05-22)
+
+**Note:** Version bump only for package @bakjs/ratelimit
+
+
+
+
+
 # [3.0.0](https://github.com/bakjs/bak/compare/@bakjs/ratelimit@2.1.1...@bakjs/ratelimit@3.0.0) (2019-05-22)
 
 

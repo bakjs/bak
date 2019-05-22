@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/bakjs/bak/compare/bak@5.0.0...bak@5.0.1) (2019-05-22)
+
+**Note:** Version bump only for package bak
+
+
+
+
+
 # [5.0.0](https://github.com/bakjs/bak/compare/bak@4.7.6...bak@5.0.0) (2019-05-22)
 
 
