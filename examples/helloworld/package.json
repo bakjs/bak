@@ -1,5 +1,4 @@
 {
-    "name": "bak-hello-world",
     "private": true,
     "dependencies": {
         "bak": "latest"

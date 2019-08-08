@@ -1,0 +1,24 @@
+{
+  "name": "@bakjs/mongo",
+  "version": "4.5.4",
+  "repository": "bakjs/bak",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Pooya Parsa <pooya@pi0.ir>"
+  ],
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "dependencies": {
+    "cachegoose": "^8.0.0",
+    "consola": "^2.6.2",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.5.10",
+    "mongoose-fill": "^1.7.0"
+  }
+}

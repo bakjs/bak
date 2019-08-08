@@ -1,0 +1,1 @@
+Please refer to [bakjs/hapi-plugins](https://github.com/bakjs/hapi-plugins) for more info and docs.

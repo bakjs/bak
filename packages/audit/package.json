@@ -1,0 +1,19 @@
+{
+  "name": "@bakjs/audit",
+  "version": "3.0.1",
+  "repository": "bakjs/bak",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Pooya Parsa <pooya@pi0.ir>"
+  ],
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "@bakjs/mongo": "*"
+  }
+}

@@ -2,7 +2,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000
 process.env.SUPPRESS_NO_CONFIG_WARNING = true
 
 const axios = require('axios')
-const { Bak } = require('..')
+const { Bak } = require('bak')
 
 function setup (name) {
   // Load bak.config.js for fixture

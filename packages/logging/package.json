@@ -1,0 +1,19 @@
+{
+  "name": "@bakjs/logging",
+  "version": "2.8.1",
+  "repository": "bakjs/bak",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Pooya Parsa <pooya@pi0.ir>"
+  ],
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "consola": "^2.6.2"
+  }
+}

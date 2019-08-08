@@ -1,0 +1,29 @@
+{
+  "name": "@bakjs/auth",
+  "version": "4.0.1",
+  "repository": "bakjs/bak",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Pooya Parsa <pooya@pi0.ir>"
+  ],
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "@bakjs/mongo": "*",
+    "bak": "*"
+  },
+  "dependencies": {
+    "@hapi/boom": "^7.4.2",
+    "@hapi/hoek": "^6.2.3",
+    "@hapi/joi": "^15.0.3",
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11"
+  }
+}

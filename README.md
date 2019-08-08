@@ -87,6 +87,15 @@ yarn bak dev # Use `yarn bak start` for production mode
 
 Your API is up! Now you can visit [http://localhost:3000/api/hello/world](http://localhost:3000/api/hello/world) for the results.
 
+
+Inspect mode:
+
+You can pass Node.js supported args after `--` arg:
+
+```bash
+yarn bak dev -- --inspect
+```
+
 <h2 align="center">License</h2>
 
 Released under The MIT [LICENSE](./LICENSE)

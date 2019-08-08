@@ -1,7 +1,16 @@
-const { Controller } = require('../../../..')
+import Joi from '@hapi/joi'
+import { Controller } from 'bak'
 
-class APIController extends Controller {
+export default class APIController extends Controller {
   init () {
+    this.defaults = {
+      validate: {
+        payload: {
+          foo: Joi.string()
+        }
+      }
+    }
+
     this.get('/hello/{name}', this.hello)
   }
 
@@ -9,5 +18,3 @@ class APIController extends Controller {
     return 'Hello ' + request.params.name
   }
 }
-
-module.exports = APIController

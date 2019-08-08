@@ -1,0 +1,21 @@
+{
+  "name": "@bakjs/route-table",
+  "version": "2.4.2",
+  "repository": "bakjs/bak",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Pooya Parsa <pooya@pi0.ir>"
+  ],
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "strip-ansi": "^5.2.0"
+  }
+}
