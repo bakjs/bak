@@ -14,7 +14,7 @@ exports.register = function (server, options) {
 
       consola.error({
         message: error,
-        tag: Object.keys(tags),
+        tag: Object.keys(tags).join(','),
         time: timestamp
       })
     }
