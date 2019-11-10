@@ -66,6 +66,7 @@ async function connect (mongoose, connectionName, connectionOpts) {
   options = {
     useNewUrlParser: true,
     useCreateIndex: true,
+    useUnifiedTopology: true,
     ...options
   }
 
@@ -81,7 +82,7 @@ async function connect (mongoose, connectionName, connectionOpts) {
   // $logger helper
   conn.$logger = isDefault
     ? consola
-    : consola.withTag(connectionName)
+    : consola.withTag(connectionName || 'unnamed')
 
   // Log connection events
   logConnectionEvents(conn)
