@@ -16,7 +16,7 @@
     "@bakjs/shortcuts": "2.2.1",
     "@hapi/boom": "^7.4.2",
     "@hapi/hapi": "^18.3.1",
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "consola": "^2.6.2",
     "esm": "3.2.25",
     "hapi-dev-errors": "^3.2.5",
