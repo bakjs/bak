@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.5.4...@bakjs/mongo@4.6.0) (2019-11-10)
+
+
+### Features
+
+* **mongo:** enable useUnifiedTopology ([2bfd1c0](https://github.com/bakjs/bak/commit/2bfd1c0))
+
+
+
+
+
 ## [4.5.4](https://github.com/bakjs/bak/compare/@bakjs/mongo@4.5.3...@bakjs/mongo@4.5.4) (2019-05-22)
 
 **Note:** Version bump only for package @bakjs/mongo
