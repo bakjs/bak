@@ -166,12 +166,19 @@
   dependencies:
     "@hapi/hoek" "6.x.x"
 
-"@hapi/boom@7.x.x", "@hapi/boom@^7.4.2":
+"@hapi/boom@7.x.x":
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/@hapi/boom/-/boom-7.4.2.tgz#c16957cd09796f6c1bfb4031bdc39d66d6d750c3"
   integrity sha512-T2CYcTI0AqSvC6YC7keu/fh9LVSMzfoMLharBnPbOwmc+Cexj9joIc5yNDKunaxYq9LPuOwMS0f2B3S1tFQUNw==
   dependencies:
     "@hapi/hoek" "6.x.x"
+
+"@hapi/boom@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@hapi/boom/-/boom-9.0.0.tgz#28f9e77ecf2dea1fe3a8982b9d8827aa5137e33a"
+  integrity sha512-D+Or4yahLq3L7D1Jf0fR1+Lgr+HPK1lej8tc6hS/fBLmK66XdpvTyKv8YUR5ls1GeQy+KGtbpKAs+ZxyzNtUyA==
+  dependencies:
+    "@hapi/hoek" "9.x.x"
 
 "@hapi/bounce@1.x.x":
   version "1.3.0"
@@ -263,6 +270,11 @@
   version "6.2.3"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-6.2.3.tgz#0abff7ac75d0c5388d2829c464b2aff74d473721"
   integrity sha512-CtV9cp35+6Sfh6OfB+AYBozNIorZ6npNJjfO8InIyh/iFQI7uBW9bIApYoYf6TWq9w9BArecw2DDJf7oK+VlRw==
+
+"@hapi/hoek@9.x.x":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.0.0.tgz#ba83436edfac1d1ffd0e94797d43419c20ad49b8"
+  integrity sha512-XxD4A5YMIH70ddjG7BJBUz7RWVQAwIP/36Eoyh0DsaWp92OAeXkrbtSEaYkynBPTsN9Uv2mZq9QWZYILl2Svrw==
 
 "@hapi/inert@^5.1.3":
   version "5.2.0"
