@@ -3622,10 +3622,10 @@ handlebars@^4.1.0, handlebars@^4.1.2:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-hapi-dev-errors@^3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/hapi-dev-errors/-/hapi-dev-errors-3.2.5.tgz#1353bd916e7f6545a16b1f42ec6ae4b9f8b96812"
-  integrity sha512-Ae9JNSRG6QvKHxil/CKbj3lrUAabbMAT319VQCXOIJAls0hhw4EUUsJdJanmPzeLrTDjlnPFtOpjMlvRGikChA==
+hapi-dev-errors@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/hapi-dev-errors/-/hapi-dev-errors-4.0.0.tgz#bbd8cce539dafc4bc2f3b7ea60dfacc3d9d86151"
+  integrity sha512-NRtbm1QnDcLj8EBqQjyUT7iheTlYED8fIJNHH/NHHuyfqefSdlC0v3x6D5XyflnCvfj10aofrevpVhAUuJMWUg==
   dependencies:
     youch "~2.0.10"
     youch-terminal "~1.0.0"

@@ -19,7 +19,7 @@
     "chalk": "^2.4.2",
     "consola": "^2.6.2",
     "esm": "3.2.25",
-    "hapi-dev-errors": "^3.2.5",
+    "hapi-dev-errors": "^4.0.0",
     "items-promise": "^1.0.0",
     "lodash": "^4.17.11",
     "nodemon": "^1.19.0",
