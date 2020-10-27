@@ -22,7 +22,7 @@
     "hapi-dev-errors": "^3.2.5",
     "items-promise": "^1.0.0",
     "lodash": "^4.17.11",
-    "nodemon": "^1.19.0",
+    "nodemon": "^2.0.6",
     "std-env": "^2.2.1",
     "sywac": "^1.2.1"
   }
