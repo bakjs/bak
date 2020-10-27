@@ -18,9 +18,9 @@
     "bak": "*"
   },
   "dependencies": {
-    "@hapi/boom": "^7.4.2",
-    "@hapi/hoek": "^6.2.3",
-    "@hapi/joi": "^15.0.3",
+    "@hapi/boom": "^9.1.0",
+    "@hapi/hoek": "^9.1.0",
+    "@hapi/joi": "^17.1.1",
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.5.1",
