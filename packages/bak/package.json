@@ -14,16 +14,16 @@
     "@bakjs/logging": "2.8.1",
     "@bakjs/route-table": "2.4.2",
     "@bakjs/shortcuts": "2.2.1",
-    "@hapi/boom": "^7.4.2",
+    "@hapi/boom": "^7.4.11",
     "@hapi/hapi": "^18.3.1",
     "chalk": "^2.4.2",
-    "consola": "^2.6.2",
+    "consola": "^2.15.0",
     "esm": "3.2.25",
-    "hapi-dev-errors": "^3.2.5",
+    "hapi-dev-errors": "^3.3.0",
     "items-promise": "^1.0.0",
     "lodash": "^4.17.11",
-    "nodemon": "^1.19.0",
+    "nodemon": "^1.19.4",
     "std-env": "^2.2.1",
-    "sywac": "^1.2.1"
+    "sywac": "^1.3.0"
   }
 }

@@ -18,13 +18,13 @@
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-html": "^5.0.5",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jest": "^22.6.3",
-    "eslint-plugin-node": "^9.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "jest": "^24.8.0",
-    "lerna": "^3.14.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^22.21.0",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "jest": "^24.9.0",
+    "lerna": "^3.22.1",
     "standard-version": "^6.0.1"
   }
 }
