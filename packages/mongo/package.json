@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "cachegoose": "^8.0.0",
-    "consola": "^2.6.2",
+    "consola": "^2.15.0",
     "lodash": "^4.17.11",
     "mongoose": "^5.5.10",
     "mongoose-fill": "^1.7.0"

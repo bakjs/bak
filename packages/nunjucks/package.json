@@ -14,9 +14,9 @@
     "lib"
   ],
   "dependencies": {
-    "@hapi/inert": "^5.1.3",
-    "@hapi/vision": "^5.5.2",
-    "nunjucks": "^3.2.0",
+    "@hapi/inert": "^5.2.2",
+    "@hapi/vision": "^5.5.4",
+    "nunjucks": "^3.2.2",
     "path": "^0.12.7"
   }
 }
